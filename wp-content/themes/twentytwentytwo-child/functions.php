@@ -13,8 +13,12 @@ function jobs_shortcode($atts)
 {
 	$allposts = get_posts(array('post_type' => 'job', 'numberposts' => -1));
 	$posts = '';
-	foreach ($allposts as $eachpost) {
-		$posts .= "<div>" . $eachpost->post_title . "</div>";
+	foreach ($allposts as $post) {
+		$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');
+		$posts .= "<div>" .
+			"<h2>" . $post->post_title . "</h2>" .
+			"<img src='" . $image[0] . "'/>" .
+			"</div>";
 	}
 	$html =	"<div id='jobs'>";
 	$html .= $posts;
@@ -28,8 +32,12 @@ function employees_shortcode($atts)
 {
 	$allposts = get_posts(array('post_type' => 'employee', 'numberposts' => -1));
 	$posts = '';
-	foreach ($allposts as $eachpost) {
-		$posts .= "<div>" . $eachpost->post_title . "</div>";
+	foreach ($allposts as $post) {
+		$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');
+		$posts .= "<div>" .
+			"<h2>" . $post->post_title . "</h2>" .
+			"<img src='" . $image[0] . "'/>" .
+			"</div>";
 	}
 	$html =	"<div id='employees'>";
 	$html .= $posts;
