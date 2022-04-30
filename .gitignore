@@ -46,3 +46,6 @@ wp-config.php
 node_modules
 .history
 *.sql
+
+wp-content/themes/twentytwenty/*
+wp-content/themes/twentytwentyone/*

@@ -45,6 +45,31 @@ function employees_shortcode($atts)
 	return $html;
 }
 add_shortcode('employees', 'employees_shortcode');
+//[employes]
+function events_shortcode($atts)
+{
+	$allposts = get_posts(array('post_type' => 'event', 'numberposts' => -1));
+	$posts = '';
+	foreach ($allposts as $post) {
+		$gallery_src = get_post_gallery($post->ID, false);
+		$image = wp_get_attachment_image(get_post_thumbnail_id($post->ID), 'medium');
+		$posts .= "<div>" .
+			"<h4>" . $post->post_title . "</h4>" .
+			$image;
+		$gallery = get_post_gallery($post->ID, true);
+		// $posts .= $gallery;
+		$posts .= "<p>" . get_post_meta($post->ID, 'date', true) . "</p>";
+		foreach (explode(",", $gallery_src['ids']) as $gallery_item) {
+			$posts .= wp_get_attachment_image($gallery_item, 'medium');
+		}
+		$posts .= "</div>";
+	}
+	$html =	"<div id='events'>";
+	$html .= $posts;
+	$html .= "</div>";
+	return $html;
+}
+add_shortcode('events', 'events_shortcode');
 
 /*
 * Creating a function to create our CPT
@@ -184,14 +209,76 @@ function custom_post_type_team()
 }
 add_action('init', 'custom_post_type_team', 0);
 
+/*
+* Creating a function to create our CPT
+*/
+
+function custom_post_type_event()
+{
+
+	// Set UI labels for Custom Post Type
+	$labels = array(
+		'name'                => _x('Events', 'Post Type General Name', 'twentytwenty'),
+		'singular_name'       => _x('Event', 'Post Type Singular Name', 'twentytwenty'),
+		'menu_name'           => __('Events', 'twentytwenty'),
+		'parent_item_colon'   => __('Parent Event', 'twentytwenty'),
+		'all_items'           => __('All Events', 'twentytwenty'),
+		'view_item'           => __('View Event', 'twentytwenty'),
+		'add_new_item'        => __('Add New Event', 'twentytwenty'),
+		'add_new'             => __('Add New', 'twentytwenty'),
+		'edit_item'           => __('Edit Event', 'twentytwenty'),
+		'update_item'         => __('Update Event', 'twentytwenty'),
+		'search_items'        => __('Search Event', 'twentytwenty'),
+		'not_found'           => __('Not Found', 'twentytwenty'),
+		'not_found_in_trash'  => __('Not found in Trash', 'twentytwenty'),
+	);
+
+	// Set other options for Custom Post Type
+
+	$args = array(
+		'label'               => __('event', 'twentytwenty'),
+		'description'         => __('Event news and reviews', 'twentytwenty'),
+		'labels'              => $labels,
+		'rewrite' => array(
+			'slug'       => 'event',
+			'with_front' => false,
+		),
+		// Features this CPT supports in Post Editor
+		'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'page-attributes'),
+		// You can associate this CPT with a taxonomy or custom taxonomy. 
+		'taxonomies'          => array('event-category'),
+		/* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */
+		'hierarchical'        => true,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+		'show_in_rest' => true,
+
+	);
+	// Registering your Custom Post Type
+	register_post_type('event', $args);
+}
+add_action('init', 'custom_post_type_event', 0);
+
 // function tr_create_my_taxonomy_team()
 // {
 // 	register_taxonomy(
-// 		'employee-category',
-// 		'employee',
+// 		'event-category',
+// 		'event',
 // 		array(
-// 			'label' => __('Employee category'),
-// 			'rewrite' => array('slug' => 'Employee category'),
+// 			'label' => __('Event category'),
+// 			'rewrite' => array('slug' => 'Event category'),
 // 			'hierarchical' => true,
 // 		)
 // 	);
