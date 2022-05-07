@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       tmy-plug
  * Description:       A wordpress plugin to display some custom post types using gutenberg blocks
@@ -13,22 +14,10 @@
  * @package           create-block
  */
 
-function create_block_tmy_block_init_render_callback($block_attributes, $content)
-{
-	$allposts = get_posts(array('post_type' => 'employee', 'numberposts' => -1));
-	$posts = '';
-	foreach ($allposts as $post) {
-		$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');
-		$posts .= "<div>" .
-			"<h2>" . $post->post_title . "</h2>" .
-			"<img src='" . $image[0] . "'/>" .
-			"</div>";
-	}
-	$html =	"<div id='employees'>";
-	$html .= $posts;
-	$html .= "</div>";
-	return $html;
-}
+require_once(__DIR__ . '/blocks/events.php');
+require_once(__DIR__ . '/blocks/employees.php');
+require_once(__DIR__ . '/blocks/jobs.php');
+
 
 function create_block_tmy_block_init()
 {
@@ -41,11 +30,5 @@ function create_block_tmy_block_init()
 		$asset_file['dependencies'],
 		$asset_file['version']
 	);
-
-	register_block_type('create-block/tmy', array(
-		'api_version' => 2,
-		'render_callback' => 'create_block_tmy_block_init_render_callback',
-		'editor_script' => 'tmy-berg',
-	));
 }
-add_action( 'init', 'create_block_tmy_block_init' );
+add_action('init', 'create_block_tmy_block_init');

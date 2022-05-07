@@ -8,74 +8,11 @@ function menu_scripts()
 	wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array($parent_style), wp_get_theme()->get('Version'));
 }
 
-//[jobs]
-function jobs_shortcode($atts)
-{
-	$allposts = get_posts(array('post_type' => 'job', 'numberposts' => -1));
-	$posts = '';
-	foreach ($allposts as $post) {
-		$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');
-		$posts .= "<div>" .
-			"<h2>" . $post->post_title . "</h2>" .
-			"<img src='" . $image[0] . "'/>" .
-			"</div>";
-	}
-	$html =	"<div id='jobs'>";
-	$html .= $posts;
-	$html .= "</div>";
-	return $html;
-}
-add_shortcode('jobs', 'jobs_shortcode');
-
-//[employes]
-function employees_shortcode($atts)
-{
-	$allposts = get_posts(array('post_type' => 'employee', 'numberposts' => -1));
-	$posts = '';
-	foreach ($allposts as $post) {
-		$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');
-		$posts .= "<div>" .
-			"<h2>" . $post->post_title . "</h2>" .
-			"<img src='" . $image[0] . "'/>" .
-			"</div>";
-	}
-	$html =	"<div id='employees'>";
-	$html .= $posts;
-	$html .= "</div>";
-	return $html;
-}
-add_shortcode('employees', 'employees_shortcode');
-//[employes]
-function events_shortcode($atts)
-{
-	$allposts = get_posts(array('post_type' => 'event', 'numberposts' => -1));
-	$posts = '';
-	foreach ($allposts as $post) {
-		$gallery_src = get_post_gallery($post->ID, false);
-		$image = wp_get_attachment_image(get_post_thumbnail_id($post->ID), 'medium');
-		$posts .= "<div>" .
-			"<h4>" . $post->post_title . "</h4>" .
-			$image;
-		$gallery = get_post_gallery($post->ID, true);
-		// $posts .= $gallery;
-		$posts .= "<p>" . get_post_meta($post->ID, 'date', true) . "</p>";
-		foreach (explode(",", $gallery_src['ids']) as $gallery_item) {
-			$posts .= wp_get_attachment_image($gallery_item, 'medium');
-		}
-		$posts .= "</div>";
-	}
-	$html =	"<div id='events'>";
-	$html .= $posts;
-	$html .= "</div>";
-	return $html;
-}
-add_shortcode('events', 'events_shortcode');
-
 /*
 * Creating a function to create our CPT
 */
 
-function custom_post_type()
+function custom_post_type_jobs()
 {
 
 	// Set UI labels for Custom Post Type
@@ -131,7 +68,7 @@ function custom_post_type()
 	// Registering your Custom Post Type
 	register_post_type('job', $args);
 }
-add_action('init', 'custom_post_type', 0);
+add_action('init', 'custom_post_type_jobs', 0);
 
 function tr_create_my_taxonomy_job()
 {
@@ -175,7 +112,7 @@ function custom_post_type_team()
 
 	$args = array(
 		'label'               => __('employee', 'twentytwenty'),
-		'description'         => __('Employee news and reviews', 'twentytwenty'),
+		'description'         => __('Employee', 'twentytwenty'),
 		'labels'              => $labels,
 		'rewrite' => array(
 			'slug'       => 'employee',
