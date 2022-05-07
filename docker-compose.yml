@@ -26,6 +26,10 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: bvm
-
+      WORDPRESS_CONFIG_EXTRA: |
+        define('SCRIPT_DEBUG', true);
+        if (isset($$_GET['debug']) && $$_GET['debug'] == 'debug') {
+          define('WP_DEBUG', true);
+        }        
 volumes:
   db_data: {}

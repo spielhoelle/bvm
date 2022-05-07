@@ -1,47 +1,28 @@
-/**
- * Registers a new block provided a unique name and an object defining its behavior.
- *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
- */
 import { registerBlockType } from '@wordpress/blocks';
+import { useSelect } from '@wordpress/data';
+import { useBlockProps } from '@wordpress/block-editor';
+import ServerSideRender from '@wordpress/server-side-render';
+registerBlockType('create-block/tmy', {
+	apiVersion: 2,
+	title: 'Employee List',
+	icon: 'groups',
+	category: 'widgets',
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * All files containing `style` keyword are bundled together. The code used
- * gets applied both to the front of your site and to the editor. All other files
- * get applied to the editor only.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import './style.scss';
-import './editor.scss';
+	edit: () => {
+		const blockProps = useBlockProps();
+		const posts = useSelect((select) => {
+			return select('core').getEntityRecords('postType', 'employee');
+		}, []);
 
-/**
- * Internal dependencies
- */
-import Edit from './edit';
-import save from './save';
-
-/**
- * Every block starts by registering a new block type definition.
- *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
- */
-registerBlockType( 'create-block/gutenpride', {
-	/**
-	 * Used to construct a preview for the block to be shown in the block inserter.
-	 */
-	example: {
-		attributes: {
-			message: 'Gutenpride',
-		},
+		return (
+			<div {...blockProps}>
+				{posts && posts.length > 0 && (
+					<ServerSideRender block={"create-block/tmy"} />
+				)}
+			</div>
+		);
 	},
-	/**
-	 * @see ./edit.js
-	 */
-	edit: Edit,
-	/**
-	 * @see ./save.js
-	 */
-	save,
-} );
+	save() {
+		return null; // Nothing to save here..
+	}
+});
