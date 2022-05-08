@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/tmy-jobs",
+	"version": "0.1.0",
+	"title": "Jobs",
+	"category": "text",
+	"icon": "flag",
+	"description": "WP plugin for displaying custom-post type gutenberg blocks",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "tmy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
