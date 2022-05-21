@@ -17,20 +17,6 @@
 require_once(__DIR__ . '/blocks/events/events.php');
 require_once(__DIR__ . '/blocks/employees/employees.php');
 require_once(__DIR__ . '/blocks/jobs/jobs.php');
-function my_block_cgb_block_assets()
-{
-	// Styles.
-	wp_enqueue_style(
-		'my_block-cgb-style-css', // Handle.
-		plugins_url('gutenpride/build/style-index.css', dirname(__FILE__)), // Block style CSS.
-		array('wp-editor'), // Dependency to include the CSS after it.
-		false
-		// filemtime( plugin_dir_path( __DIR__ ) . 'gutenpride/build/style-index.css' ) // Version: filemtime — Gets file modification time.
-	);
-} // End function my_block_cgb_block_assets().
-
-// Hook: Frontend assets.
-add_action('enqueue_block_assets', 'my_block_cgb_block_assets');
 
 function create_block_tmy_block_init()
 {

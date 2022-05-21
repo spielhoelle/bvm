@@ -3,7 +3,7 @@
 	"apiVersion": 2,
 	"name": "create-block/tmy-employees",
 	"version": "0.1.0",
-	"title": "Employees",
+	"title": "employees",
 	"category": "text",
 	"icon": "flag",
 	"description": "WP plugin for displaying custom-post type gutenberg blocks",
@@ -18,7 +18,7 @@
 		"html": false
 	},
 	"textdomain": "tmy",
-	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"editorScript": "file:../../build/index.js",
+	"editorStyle": "file:../../build/index.css",
+	"style": "file:../../build/style-index.css"
 }

@@ -2,6 +2,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import { useSelect } from '@wordpress/data';
 import { useBlockProps } from '@wordpress/block-editor';
 import ServerSideRender from '@wordpress/server-side-render';
+import './editor.scss';
 import './style.scss';
 
 registerBlockType('create-block/tmy-events', {

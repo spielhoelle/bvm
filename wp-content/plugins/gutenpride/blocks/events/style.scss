@@ -1,6 +1,5 @@
 /**
- * The following styles get applied both on the front of your site
- * and in the editor.
+ * The following styles get applied only on the front of your site.
  *
  * Replace them with your own styles or remove the file completely.
  */
@@ -8,6 +7,7 @@
 .wp-block-create-block-tmy {
 	font-size: 64px;
 }
+
 .events-wrapper {
 	display: grid;
 	grid-gap: 10px;
