@@ -156,9 +156,11 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _blocks_employees__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../blocks/employees */ "./blocks/employees/index.js");
-/* harmony import */ var _blocks_events__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../blocks/events */ "./blocks/events/index.js");
-/* harmony import */ var _blocks_jobs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../blocks/jobs */ "./blocks/jobs/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
+/* harmony import */ var _blocks_employees__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../blocks/employees */ "./blocks/employees/index.js");
+/* harmony import */ var _blocks_events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../blocks/events */ "./blocks/events/index.js");
+/* harmony import */ var _blocks_jobs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../blocks/jobs */ "./blocks/jobs/index.js");
+
 
 
 
@@ -229,6 +231,18 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************!*\
   !*** ./blocks/jobs/style.scss ***!
   \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/style.scss":
+/*!************************!*\
+  !*** ./src/style.scss ***!
+  \************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);

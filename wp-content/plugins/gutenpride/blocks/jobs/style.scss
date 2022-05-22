@@ -1,3 +1,9 @@
 #jobs {
-	
+	a {
+		text-decoration: none;
+		color: var(--wp--preset--color--secondary);
+	}
+	span {
+		float: right;
+	}
 }
