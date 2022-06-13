@@ -49,3 +49,5 @@ node_modules
 
 wp-content/themes/twentytwenty/*
 wp-content/themes/twentytwentyone/*
+wp-content/plugins/multiblock
+wp-content/plugins/gutenpride/build
