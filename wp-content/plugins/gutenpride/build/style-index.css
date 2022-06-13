@@ -6,22 +6,6 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-@font-face {
-  font-family: "Asap";
-  src: url(fonts/Asap-Bold.193e1e1a.ttf) format("truetype");
-  font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: normal;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a {
-  font-family: "Asap", sans-serif !important;
-}
 /*!****************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/employees/style.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************/
@@ -100,6 +84,34 @@ a {
 }
 #jobs span {
   float: right;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/team/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
+/** style.scss **/
+.wp-block-create-block-tmy-team {
+  overflow: hidden;
+  position: relative;
+}
+.wp-block-create-block-tmy-team .team-gallery-inner-container {
+  display: flex;
+}
+.wp-block-create-block-tmy-team .team-gallery-inner-container[data-direction=left] {
+  -webkit-animation: marquee-left 5s linear infinite;
+          animation: marquee-left 5s linear infinite;
+}
+.wp-block-create-block-tmy-team .team-gallery-inner-container[data-direction=right] {
+  -webkit-animation: marquee-right 5s linear infinite;
+          animation: marquee-right 5s linear infinite;
+}
+.wp-block-create-block-tmy-team .team-gallery-inner-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  min-width: 16vw;
+}
+.wp-block-create-block-tmy-team .team-gallery-inner-container img:not(:last-child) {
+  margin-right: 16px;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
