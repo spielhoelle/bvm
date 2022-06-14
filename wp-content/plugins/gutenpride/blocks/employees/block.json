@@ -15,7 +15,8 @@
 		}
 	},
 	"supports": {
-		"html": false
+		"html": false,
+		"align": true
 	},
 	"textdomain": "tmy",
 	"editorScript": "file:../../build/index.js",

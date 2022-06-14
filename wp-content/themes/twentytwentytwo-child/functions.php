@@ -1,4 +1,8 @@
 <?php
+add_action('after_setup_theme', function () {
+	add_theme_support('align-wide');
+	// add_theme_support('wp-block-styles');
+});
 add_action('wp_enqueue_scripts', 'menu_scripts');
 function menu_scripts()
 {

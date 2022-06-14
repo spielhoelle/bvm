@@ -44,6 +44,15 @@
 					"name": "Default filter"
 				}
 			]
+		},
+		"layout": {
+			"contentSize": "920px",
+			"wideSize": "1140px"
+		},
+		"custom": {
+			"spacing": {
+				"outer": "0"
+			}
 		}
 	}
 }

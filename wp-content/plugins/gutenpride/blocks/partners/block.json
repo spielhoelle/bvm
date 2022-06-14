@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/tmy-partners",
+	"version": "0.1.0",
+	"title": "partners",
+	"category": "text",
+	"icon": "flag",
+	"description": "WP plugin for displaying custom-post type gutenberg blocks",
+	"attributes": {
+		"images": {
+			"type": "array",
+			"default": []
+		},
+		"direction": {
+			"type": "string",
+			"default": "left",
+			"enum": [
+				"left",
+				"right"
+			]
+		},
+		"name": {
+			"type": "string",
+			"default": ""
+		},
+		"jobtitle": {
+			"type": "string",
+			"default": ""
+		},
+		"backgroundColor": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": true
+	},
+	"textdomain": "tmy"
+}
