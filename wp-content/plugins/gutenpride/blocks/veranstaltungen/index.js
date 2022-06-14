@@ -5,12 +5,11 @@ import ServerSideRender from '@wordpress/server-side-render';
 import './editor.scss';
 import './style.scss';
 
-registerBlockType('create-block/tmy-events', {
+registerBlockType('create-block/tmy-veranstaltungen', {
 	apiVersion: 2,
 	title: 'Event List',
 	icon: 'megaphone',
 	category: 'widgets',
-
 	edit: () => {
 		const blockProps = useBlockProps();
 		const posts = useSelect((select) => {
@@ -20,7 +19,7 @@ registerBlockType('create-block/tmy-events', {
 		return (
 			<div {...blockProps}>
 				{posts && posts.length > 0 && (
-					<ServerSideRender block={"create-block/tmy-events"} />
+					<ServerSideRender block={"create-block/tmy-veranstaltungen"} />
 				)}
 			</div>
 		);

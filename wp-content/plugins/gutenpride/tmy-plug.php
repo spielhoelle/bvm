@@ -14,7 +14,7 @@
  * @package           create-block
  */
 
-require_once(__DIR__ . '/blocks/events/events.php');
+require_once(__DIR__ . '/blocks/veranstaltungen/veranstaltungen.php');
 require_once(__DIR__ . '/blocks/employees/employees.php');
 require_once(__DIR__ . '/blocks/jobs/jobs.php');
 require_once(__DIR__ . '/blocks/partners/partners.php');

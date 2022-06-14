@@ -153,22 +153,22 @@ add_action('init', 'custom_post_type_team', 0);
 * Creating a function to create our CPT
 */
 
-function custom_post_type_event()
+function custom_post_type_veranstaltungen()
 {
 
 	// Set UI labels for Custom Post Type
 	$labels = array(
-		'name'                => _x('Events', 'Post Type General Name', 'twentytwenty'),
-		'singular_name'       => _x('Event', 'Post Type Singular Name', 'twentytwenty'),
-		'menu_name'           => __('Events', 'twentytwenty'),
-		'parent_item_colon'   => __('Parent Event', 'twentytwenty'),
-		'all_items'           => __('All Events', 'twentytwenty'),
-		'view_item'           => __('View Event', 'twentytwenty'),
-		'add_new_item'        => __('Add New Event', 'twentytwenty'),
+		'name'                => _x('Veranstaltungen', 'Post Type General Name', 'twentytwenty'),
+		'singular_name'       => _x('Veranstaltung', 'Post Type Singular Name', 'twentytwenty'),
+		'menu_name'           => __('Veranstaltungen', 'twentytwenty'),
+		'parent_item_colon'   => __('Parent Veranstaltung', 'twentytwenty'),
+		'all_items'           => __('All Veranstaltungen', 'twentytwenty'),
+		'view_item'           => __('View Veranstaltung', 'twentytwenty'),
+		'add_new_item'        => __('Add New Veranstaltung', 'twentytwenty'),
 		'add_new'             => __('Add New', 'twentytwenty'),
-		'edit_item'           => __('Edit Event', 'twentytwenty'),
-		'update_item'         => __('Update Event', 'twentytwenty'),
-		'search_items'        => __('Search Event', 'twentytwenty'),
+		'edit_item'           => __('Edit Veranstaltung', 'twentytwenty'),
+		'update_item'         => __('Update Veranstaltung', 'twentytwenty'),
+		'search_items'        => __('Search Veranstaltung', 'twentytwenty'),
 		'not_found'           => __('Not Found', 'twentytwenty'),
 		'not_found_in_trash'  => __('Not found in Trash', 'twentytwenty'),
 	);
@@ -176,17 +176,17 @@ function custom_post_type_event()
 	// Set other options for Custom Post Type
 
 	$args = array(
-		'label'               => __('event', 'twentytwenty'),
-		'description'         => __('Event news and reviews', 'twentytwenty'),
+		'label'               => __('veranstaltungen', 'twentytwenty'),
+		'description'         => __('Veranstaltung news and reviews', 'twentytwenty'),
 		'labels'              => $labels,
 		'rewrite' => array(
-			'slug'       => 'event',
+			'slug'       => 'veranstaltungen',
 			'with_front' => false,
 		),
 		// Features this CPT supports in Post Editor
 		'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'page-attributes'),
 		// You can associate this CPT with a taxonomy or custom taxonomy. 
-		'taxonomies'          => array('event-category'),
+		'taxonomies'          => array('veranstaltungen-category'),
 		/* A hierarchical CPT is like Pages and can have
         * Parent and child items. A non-hierarchical CPT
         * is like Posts.
@@ -207,18 +207,18 @@ function custom_post_type_event()
 
 	);
 	// Registering your Custom Post Type
-	register_post_type('event', $args);
+	register_post_type('veranstaltungen', $args);
 }
-add_action('init', 'custom_post_type_event', 0);
+add_action('init', 'custom_post_type_veranstaltungen', 0);
 
 // function tr_create_my_taxonomy_team()
 // {
 // 	register_taxonomy(
-// 		'event-category',
-// 		'event',
+// 		'veranstaltungen-category',
+// 		'veranstaltungen',
 // 		array(
-// 			'label' => __('Event category'),
-// 			'rewrite' => array('slug' => 'Event category'),
+// 			'label' => __('Veranstaltung category'),
+// 			'rewrite' => array('slug' => 'Veranstaltung category'),
 // 			'hierarchical' => true,
 // 		)
 // 	);
