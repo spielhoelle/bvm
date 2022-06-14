@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/tmy-events",
+	"version": "0.1.0",
+	"title": "events",
+	"category": "text",
+	"icon": "flag",
+	"description": "WP plugin for displaying custom-post type gutenberg blocks",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2"
+		},
+		"date": {
+			"type": "string",
+			"source": "html",
+			"selector": "strong"
+		},
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		},
+		"images": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": true
+	},
+	"textdomain": "tmy"
+}
