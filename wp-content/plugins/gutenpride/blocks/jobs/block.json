@@ -16,7 +16,8 @@
 	},
 	"supports": {
 		"html": false,
-		"align": true
+		"align": true,
+		"anchor": true
 	},
 	"textdomain": "tmy"
 }

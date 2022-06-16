@@ -15,7 +15,6 @@ export default function Edit(props) {
     attributes,
     setAttributes,
   } = props;
-  const blockProps = useBlockProps();
   const onChangeContent = (newContent) => {
     setAttributes({ content: newContent });
   };
@@ -28,25 +27,21 @@ export default function Edit(props) {
   const hasImages = attributes.images.length > 0;
   return (
     <div {...useBlockProps()}>
-
       <div className="events-wrapper">
         <div className="events-1">
           <RichText
-            {...blockProps}
             tagName="h2"
             onChange={onChangeTitle}
             value={attributes.title}
             placeholder={__('Title...')}
           />
           <RichText
-            {...blockProps}
             tagName="strong"
             onChange={onChangeDate}
             value={attributes.date}
             placeholder={__('Date...')}
           />
           <RichText
-            {...blockProps}
             tagName="p"
             onChange={onChangeContent}
             value={attributes.content}

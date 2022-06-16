@@ -1,17 +1,26 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "create-block/tmy-veranstaltungen",
+	"name": "create-block/tmy-miniimage",
 	"version": "0.1.0",
-	"title": "veranstaltungen",
+	"title": "miniimage",
 	"category": "text",
 	"icon": "flag",
 	"description": "WP plugin for displaying custom-post type gutenberg blocks",
 	"attributes": {
-		"content": {
+		"miniImage": {
 			"type": "string",
-			"source": "html",
-			"selector": "p"
+			"default": null
+		},
+		"direction": {
+			"type": "string",
+			"default": "left-top",
+			"enum": [
+				"left-top",
+				"right-top",
+				"right-bottom",
+				"left-bottom"
+			]
 		}
 	},
 	"supports": {

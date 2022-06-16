@@ -1,0 +1,30 @@
+/** style.scss **/
+.wp-block-create-block-tmy-miniimage {
+	position: relative !important; 
+
+	.miniimage-gallery-inner-container {
+		position: absolute;
+		z-index: 9999999;
+		&.left-bottom {
+			left: 0;
+			bottom: 0;
+		}
+		&.right-bottom {
+			right: 0;
+			bottom: 0;
+		}
+		&.left-top {
+			left: 0;
+			top: 0;
+		}
+		&.right-top {
+			right: 0;
+			top: 0;
+		}
+		img {
+			object-fit: contain;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
