@@ -8,10 +8,9 @@
 	"icon": "flag",
 	"description": "WP plugin for displaying custom-post type gutenberg blocks",
 	"attributes": {
-		"content": {
-			"type": "string",
-			"source": "html",
-			"selector": "p"
+		"jobpages": {
+			"type": "array",
+			"default": []
 		}
 	},
 	"supports": {

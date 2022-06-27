@@ -54,5 +54,14 @@
 				"outer": "0"
 			}
 		}
-	}
+	},
+	"customTemplates": [
+		{
+			"name": "jobs",
+			"title": "Job template",
+			"postTypes": [
+				"page"
+			]
+		}
+	]
 }
