@@ -7,7 +7,7 @@ import save from './save';
 registerBlockType('create-block/tmy-miniimage', {
   apiVersion: 2,
   title: 'miniimage',
-  icon: 'feature-icon',
+  icon: 'format-image',
   category: 'widgets',
   edit: Edit,
   save,

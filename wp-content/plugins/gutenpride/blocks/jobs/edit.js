@@ -1,11 +1,11 @@
 import { __ } from '@wordpress/i18n';
 import { useSelect } from '@wordpress/data';
 import {
-  useBlockProps, BlockControls, MediaPlaceholder, BlockIcon, InspectorControls, MediaUpload, MediaUploadCheck,
+  useBlockProps, InspectorControls,
 } from '@wordpress/block-editor';
 import {
   SelectControl,
-  PanelBody, ToolbarButton, ToolbarGroup,
+  PanelBody,
 } from '@wordpress/components';
 
 export default function Edit(props) {
@@ -23,7 +23,6 @@ export default function Edit(props) {
     attributes.jobpages.push(job);
     setAttributes({ jobpages: attributes.jobpages });
   };
-  console.log('attributes', attributes);
   return (
     <div {...useBlockProps()}>
 
