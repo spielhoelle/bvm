@@ -5,3 +5,4 @@ import '../blocks/jobs';
 import '../blocks/partners';
 import '../blocks/events';
 import '../blocks/miniimage';
+import '../blocks/circletext';

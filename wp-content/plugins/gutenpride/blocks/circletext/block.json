@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/tmy-circletext",
+	"version": "0.1.0",
+	"title": "Circular text",
+	"category": "text",
+	"icon": "marker",
+	"description": "Write circular text that spins while scrolling",
+	"attributes": {
+		"circletext": {
+			"type": "string",
+			"default": null
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": true,
+		"anchor": true
+	},
+	"textdomain": "tmy"
+}

@@ -20,6 +20,7 @@ require_once(__DIR__ . '/blocks/jobs/jobs.php');
 require_once(__DIR__ . '/blocks/partners/partners.php');
 require_once(__DIR__ . '/blocks/events/events.php');
 require_once(__DIR__ . '/blocks/miniimage/miniimage.php');
+require_once(__DIR__ . '/blocks/circletext/circletext.php');
 
 function create_block_tmy_block_init()
 {
