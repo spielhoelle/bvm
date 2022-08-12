@@ -36,7 +36,7 @@ export default function Edit(props) {
         a 37,37 0 1,1 -74,0"
               />
             </defs>
-            <text fontSize="17">
+            <text>
               <textPath xlinkHref="#circle">
                 {attributes.circletext}
               </textPath>
