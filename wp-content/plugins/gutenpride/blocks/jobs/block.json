@@ -18,5 +18,8 @@
 		"align": true,
 		"anchor": true
 	},
-	"textdomain": "tmy"
+	"textdomain": "tmy",
+	"editorScript": "file:../../build/jobs.js",
+	"editorStyle": "file:../../build/jobs.css",
+	"style": "file:../../build/style-jobs.css"
 }

@@ -28,5 +28,8 @@
 		"align": true,
 		"anchor": true
 	},
-	"textdomain": "tmy"
+	"textdomain": "tmy",
+	"editorScript": "file:../../build/miniimage.js",
+	"editorStyle": "file:../../build/miniimage.css",
+	"style": "file:../../build/style-miniimage.css"
 }

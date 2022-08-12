@@ -37,5 +37,8 @@
 		"align": true,
 		"anchor": true
 	},
-	"textdomain": "tmy"
+	"textdomain": "tmy",
+	"editorScript": "file:../../build/partners.js",
+	"editorStyle": "file:../../build/partners.css",
+	"style": "file:../../build/style-partners.css"
 }

@@ -33,5 +33,8 @@
 		"align": true,
 		"anchor": true
 	},
-	"textdomain": "tmy"
+	"textdomain": "tmy",
+	"editorScript": "file:../../build/events.js",
+	"editorStyle": "file:../../build/events.css",
+	"style": "file:../../build/style-events.css"
 }

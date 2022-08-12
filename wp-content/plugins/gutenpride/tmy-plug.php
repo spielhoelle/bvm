@@ -14,24 +14,20 @@
  * @package           create-block
  */
 
-require_once(__DIR__ . '/blocks/veranstaltungen/veranstaltungen.php');
-require_once(__DIR__ . '/blocks/employees/employees.php');
-require_once(__DIR__ . '/blocks/jobs/jobs.php');
-require_once(__DIR__ . '/blocks/partners/partners.php');
-require_once(__DIR__ . '/blocks/events/events.php');
-require_once(__DIR__ . '/blocks/miniimage/miniimage.php');
-require_once(__DIR__ . '/blocks/circletext/circletext.php');
-
 function create_block_tmy_block_init()
 {
-	// automatically load dependencies and version
-	$asset_file = include(plugin_dir_path(__FILE__) . 'build/index.asset.php');
-
-	wp_register_script(
-		'tmy-berg',
-		plugins_url('build/index.js', __FILE__),
-		$asset_file['dependencies'],
-		$asset_file['version']
+	$blocks = array(
+		'circletext',
+		'employees',
+		'events',
+		'jobs',
+		'miniimage',       
+		'partners',
+		'veranstaltungen'
 	);
+
+	foreach ($blocks as $block) {
+		register_block_type(plugin_dir_path(__FILE__) . '/blocks/' . $block . '/block.json');
+	}
 }
 add_action('init', 'create_block_tmy_block_init');

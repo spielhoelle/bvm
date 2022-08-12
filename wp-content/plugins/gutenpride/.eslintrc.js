@@ -26,5 +26,8 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'max-len': 0,
     'jsx-a11y/alt-text': 0,
+    'semi': [2, 'never'],
+    'quote-props': ['always'],
+    "indent": ["error", 4]
   },
 };

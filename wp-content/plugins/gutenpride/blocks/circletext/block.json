@@ -18,5 +18,9 @@
 		"align": true,
 		"anchor": true
 	},
-	"textdomain": "tmy"
+	"textdomain": "tmy",
+	"editorScript": "file:../../build/circletext.js",
+	"editorStyle": "file:../../build/circletext.css",
+	"style": "file:../../build/style-circletext.css",
+	"script": "file:../../build/circletext_frontend.js"
 }

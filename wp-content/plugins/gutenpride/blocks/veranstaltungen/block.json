@@ -19,5 +19,8 @@
 		"align": true,
 		"anchor": true
 	},
-	"textdomain": "tmy"
+	"textdomain": "tmy",
+	"editorScript": "file:../../build/veranstaltungen.js",
+	"editorStyle": "file:../../build/veranstaltungen.css",
+	"style": "file:../../build/style-veranstaltungen.css"
 }
