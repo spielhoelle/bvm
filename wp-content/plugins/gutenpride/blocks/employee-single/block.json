@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/tmy-employee-single",
+	"version": "0.1.0",
+	"title": "employee-single",
+	"category": "text",
+	"icon": "flag",
+	"description": "WP plugin for displaying custom-post type gutenberg blocks",
+	"parent": ["create-block/tmy-employees"],
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2"
+		},
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		},
+		"image": {
+			"type": "string",
+			"default": null
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": true,
+		"anchor": true
+	},
+	"textdomain": "tmy",
+	"editorScript": "file:../../build/employee-single.js",
+	"editorStyle": "file:../../build/employee-single.css",
+	"style": "file:../../build/style-employee-single.css"
+}

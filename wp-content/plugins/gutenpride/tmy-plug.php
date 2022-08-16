@@ -19,6 +19,7 @@ function create_block_tmy_block_init()
 	$blocks = array(
 		'circletext',
 		'employees',
+		'employee-single',
 		'events',
 		'jobs',
 		'miniimage',       

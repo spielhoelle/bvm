@@ -4,10 +4,10 @@ import './style.scss';
 import Edit from './edit';
 import save from './save';
 
-registerBlockType('create-block/tmy-employees', {
+registerBlockType('create-block/tmy-employee-single', {
 	apiVersion: 2,
-	title: 'employees',
-	icon: 'groups',
+	title: 'employee-single',
+	icon: 'businessperson',
 	category: 'widgets',
 	edit: Edit,
 	save,

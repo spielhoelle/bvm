@@ -8,11 +8,10 @@
 	"icon": "flag",
 	"description": "WP plugin for displaying custom-post type gutenberg blocks",
 	"attributes": {
-		"content": {
-			"type": "string",
-			"source": "html",
-			"selector": "p"
-		}
+		"employees": {
+            "type": "array",
+            "default": []
+		}		
 	},
 	"supports": {
 		"html": false,
