@@ -15,7 +15,7 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^22.2.1",
+		"@wordpress/scripts": "^23.7.1",
 		"eslint": "^8.17.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-plugin-import": "^2.26.0",
