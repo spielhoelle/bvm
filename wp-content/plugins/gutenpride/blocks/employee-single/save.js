@@ -5,7 +5,7 @@ export default function save(props) {
   const { attributes } = props;
   return (
     <div {...blockProps}>
-      <div className="employee-single-wrapper">
+      <div className={`employee-single-wrapper ${attributes.direction}`}>
         <div className="employee-single-text">
           <div className="employee-single-text-wrapper">
             <RichText.Content

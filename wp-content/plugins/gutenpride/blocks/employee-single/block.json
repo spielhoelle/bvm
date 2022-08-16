@@ -22,6 +22,14 @@
 		"image": {
 			"type": "string",
 			"default": null
+		},
+		"direction": {
+			"type": "string",
+			"default": "left",
+			"enum": [
+				"left",
+				"right"
+			]
 		}
 	},
 	"supports": {
