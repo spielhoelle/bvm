@@ -1,7 +1,8 @@
 import { __ } from '@wordpress/i18n';
 import {
   useBlockProps,
-  InnerBlocks} from '@wordpress/block-editor';
+  InnerBlocks
+} from '@wordpress/block-editor';
 const ALLOWED_BLOCK_TYPES = ['create-block/tmy-employee-single'];
 export default function Edit(props) {
   const {
@@ -17,6 +18,15 @@ export default function Edit(props) {
         allowedBlocks={ALLOWED_BLOCK_TYPES}
         renderAppender={() => <InnerBlocks.ButtonBlockAppender />}
       />
+      <div className="wp-block-create-block-tmy-employee-single workbox">
+        <div className="employee-single-wrapper">
+          <div className="employee-single-text">
+            <div className="employee-single-text-wrapper">
+              <h2>Lust bei uns zu arbeiten?</h2>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,9 +1,46 @@
-.employee-single-wrapper {
+$image_size: 200px;
+.wp-block-create-block-tmy-employee-single {
 	display: flex;
 	gap: 5px;
+	position: relative;
+	transition: all 0.3s ease;
+	.employee-single-wrapper {
+		position: relative;
+		z-index: 0;
+		transition: all 0.3s ease;
+	}
 	img {
-		width: 200px;
-		height: 200px;
+		width: $image_size;
+		height: $image_size;
 		object-fit: cover;
+	}
+	h2 {
+		font-size: 18px;
+	}
+	.employee-single-text {
+		border-radius: 50%;
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: $image_size;
+		height: 100%;
+		transition: all 0.3s ease;
+		// background-color: pink;
+		.employee-single-text-wrapper {
+			padding: 20px;
+		}
+		h2,
+		p {
+			margin: 0;
+		}
+	}
+	&:not(.workbox):hover {
+		.employee-single-wrapper {
+			padding-right: $image_size;
+		}
+		.employee-single-text {
+			margin-left: 50%;
+		}
 	}
 }

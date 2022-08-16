@@ -18,28 +18,27 @@ export default function Edit(props) {
   const onChangeContent = (newContent) => {
     setAttributes({ content: newContent });
   };
-  const onChangeDate = (newDate) => {
-    setAttributes({ date: newDate });
-  };
   const onChangeTitle = (newTitle) => {
     setAttributes({ title: newTitle });
   };
   return (
     <div {...useBlockProps()}>
       <div className="employee-single-wrapper">
-        <div className="employee-single">
-          <RichText
-            tagName="h2"
-            onChange={onChangeTitle}
-            value={attributes.title}
-            placeholder={__('Title...')}
-          />
-          <RichText
-            tagName="p"
-            onChange={onChangeContent}
-            value={attributes.content}
-            placeholder={__('Content...')}
-          />
+        <div className="employee-single-text">
+          <div className="employee-single-text-wrapper">
+            <RichText
+              tagName="h2"
+              onChange={onChangeTitle}
+              value={attributes.title}
+              placeholder={__('Title...')}
+            />
+            <RichText
+              tagName="p"
+              onChange={onChangeContent}
+              value={attributes.content}
+              placeholder={__('Content...')}
+            />
+          </div>
         </div>
         {attributes.image && (
           <figure className={`employee-single-image`}>
@@ -59,23 +58,23 @@ export default function Edit(props) {
 
       </div>
       {attributes.image && (
-      <BlockControls>
-        <ToolbarGroup>
-          <MediaUploadCheck>
-            <MediaUpload
-              addToGallery
-              onSelect={(newImage) => setAttributes({ image: newImage.url })}
-              allowedTypes={['image']}
-              value={attributes.image.id}
-              render={({ open }) => (
-                <ToolbarButton onClick={open}>
-                  {__('Edit employee picture', 'employee-image')}
-                </ToolbarButton>
-              )}
-            />
-          </MediaUploadCheck>
-        </ToolbarGroup>
-      </BlockControls>
+        <BlockControls>
+          <ToolbarGroup>
+            <MediaUploadCheck>
+              <MediaUpload
+                addToGallery
+                onSelect={(newImage) => setAttributes({ image: newImage.url })}
+                allowedTypes={['image']}
+                value={attributes.image.id}
+                render={({ open }) => (
+                  <ToolbarButton onClick={open}>
+                    {__('Edit employee picture', 'employee-image')}
+                  </ToolbarButton>
+                )}
+              />
+            </MediaUploadCheck>
+          </ToolbarGroup>
+        </BlockControls>
       )}
     </div>
   );

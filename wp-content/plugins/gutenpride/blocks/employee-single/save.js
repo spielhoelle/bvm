@@ -6,15 +6,17 @@ export default function save(props) {
   return (
     <div {...blockProps}>
       <div className="employee-single-wrapper">
-        <div className="employee-single">
-          <RichText.Content
-            tagName="h2"
-            value={attributes.title}
-          />
-          <RichText.Content
-            tagName="p"
-            value={attributes.content}
-          />
+        <div className="employee-single-text">
+          <div className="employee-single-text-wrapper">
+            <RichText.Content
+              tagName="h2"
+              value={attributes.title}
+            />
+            <RichText.Content
+              tagName="p"
+              value={attributes.content}
+            />
+          </div>
         </div>
         <figure className={`employee-single-image`}>
           <img alt={attributes.image} src={attributes.image} />
