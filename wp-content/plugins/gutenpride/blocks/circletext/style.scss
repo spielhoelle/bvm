@@ -2,6 +2,8 @@
 .wp-block-create-block-tmy-circletext {
 	overflow: hidden;
 	.circletext-text {
+		margin: 0;
+		position: relative;
 		svg {
 			fill: currentColor;
 			height: auto;
@@ -11,6 +13,15 @@
 			text {
 				font-size: 7px;
 			}
+		}
+		.second_circle {
+			transform: scale(0.7);
+			text {
+				font-size: 14px;
+			}
+			position: absolute;
+			left: 0;
+			top: 0;
 		}
 	}
 }

@@ -11,6 +11,10 @@
 		"circletext": {
 			"type": "string",
 			"default": null
+		},
+		"circlesubtext": {
+			"type": "string",
+			"default": null
 		}
 	},
 	"supports": {
