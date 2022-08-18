@@ -1,6 +1,14 @@
 import {
-  useBlockProps, RichText,
+  useBlockProps,
+  RichText,
+  InspectorControls,
 } from '@wordpress/block-editor'
+import {
+  SelectControl,
+  PanelBody,
+  ToolbarButton,
+  ToolbarGroup,
+} from '@wordpress/components'
 import { __ } from '@wordpress/i18n'
 import './style.scss'
 
@@ -33,7 +41,7 @@ export default function Edit(props) {
           </>
         ) : (
           <>
-            <svg viewBox="0 0 100 100" width="100" height="100">
+            <svg viewBox="0 0 100 100" width="100" height="100" data-direction={attributes.direction}>
               <defs>
                 <path
                   id="circle"
@@ -51,7 +59,7 @@ export default function Edit(props) {
                 </textPath>
               </text>
             </svg>
-            <svg viewBox="0 0 100 100" width="100" height="100" className="second_circle">
+            <svg viewBox="0 0 100 100" width="100" height="100" className="second_circle" data-direction={attributes.direction}>
               <defs>
                 <path
                   id="circlesubtext"
@@ -68,6 +76,19 @@ export default function Edit(props) {
           </>
         )}
       </p>
+      <InspectorControls>
+        <PanelBody title={__('General', 'gutenpride')} initialOpen>
+          <SelectControl
+            value={attributes.direction}
+            options={[
+              { value: 'left', label: 'left' },
+              { value: 'right', label: 'right' },
+            ]}
+            label={__('Rotation direction', 'gutenpride')}
+            onChange={(newDirection) => setAttributes({ direction: newDirection })}
+          />
+        </PanelBody>
+      </InspectorControls>
     </div>
   )
 }
