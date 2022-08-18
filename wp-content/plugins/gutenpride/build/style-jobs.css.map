@@ -1,0 +1,1 @@
+{"version":3,"file":"./style-jobs.css","mappings":";;;AACC;EACC;EACA;AAAF;AAEC;EACC;AAAF,C","sources":["webpack://tmy/./blocks/jobs/style.scss"],"sourcesContent":["#jobs {\n\ta {\n\t\ttext-decoration: none;\n\t\tcolor: var(--wp--preset--color--secondary);\n\t}\n\tspan {\n\t\tfloat: right;\n\t}\n}"],"names":[],"sourceRoot":""}

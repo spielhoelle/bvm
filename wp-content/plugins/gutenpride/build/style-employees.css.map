@@ -1,0 +1,1 @@
+{"version":3,"file":"./style-employees.css","mappings":";;;AAAA;EACC;EACA;AACD,C","sources":["webpack://tmy/./blocks/employees/style.scss"],"sourcesContent":[".employees {\n\tdisplay: flex;\n\tgap: 5px;\n}"],"names":[],"sourceRoot":""}

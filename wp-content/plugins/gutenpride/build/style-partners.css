@@ -1,0 +1,24 @@
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/partners/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+/** style.scss **/
+.wp-block-create-block-tmy-partners {
+  overflow: hidden;
+  position: relative;
+}
+.wp-block-create-block-tmy-partners .partners-gallery-inner-container {
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-template-rows: 50px 50px;
+  grid-auto-columns: 50px;
+  justify-content: space-between;
+  margin: 0;
+}
+.wp-block-create-block-tmy-partners .partners-gallery-inner-container img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style-partners.css.map*/
