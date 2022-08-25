@@ -4,10 +4,10 @@ import './style.scss';
 import Edit from './edit';
 import save from './save';
 
-registerBlockType('create-block/tmy-events', {
+registerBlockType('create-block/tmy-event-single', {
 	apiVersion: 2,
-	title: 'events',
-	icon: 'groups',
+	title: 'event-single',
+	icon: 'businessperson',
 	category: 'widgets',
 	edit: Edit,
 	save,

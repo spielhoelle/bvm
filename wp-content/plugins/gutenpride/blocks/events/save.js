@@ -1,34 +1,44 @@
-import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 export default function save(props) {
-  const blockProps = useBlockProps.save();
-  const hasImages = props.attributes.images.length > 0;
+  const blockProps = useBlockProps.save({
+    className: 'events',
+  })
   return (
     <div {...blockProps}>
       <div className="events-wrapper">
-        <div className="events-1">
-          <RichText.Content
-            {...blockProps}
-            tagName="h2"
-            value={props.attributes.title}
-          />
-          <RichText.Content
-            {...blockProps}
-            tagName="strong"
-            value={props.attributes.date}
-          />
-          <RichText.Content
-            {...blockProps}
-            tagName="p"
-            value={props.attributes.content}
-          />
-        </div>
-        {hasImages && props.attributes.images.map((image, index) => (
-          <figure className={`events-${index + 2}`}>
-            <img alt={image.url} key={image.url} src={image.url} />
-          </figure>
+        <InnerBlocks.Content />
+      </div>
+      <div className="workbox">
+        {props.attributes.events.map((block, index) => (
+          <div className={`events-text ${index !== 0 ? `hidden` : ``}`}>
+            {block.attributes.content}
+          </div>
         ))}
+        <svg viewBox="0 0 100 100" width="100" height="100" style={{ "transform": "rotate(90deg)" }}>
+          <defs>
+            <path
+              id="circle"
+              d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+            />
+          </defs>
+          <text>
+            <textPath xlinkHref="#circle">
+              {props.attributes.events.map((block, index) => (
+                <tspan
+                  key={block.attributes.title}
+                  xmlSpace="preserve"
+                  fill={index === 0 ? "#CB8E00" : "black"}
+                >
+                  {' '}
+                  {block.attributes.title}
+                  {' '}
+                </tspan>
+              ))}
+            </textPath>
+          </text>
+        </svg>
       </div>
     </div>
-  );
+  )
 }

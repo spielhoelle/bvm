@@ -7,23 +7,11 @@
 	"category": "text",
 	"icon": "flag",
 	"description": "WP plugin for displaying custom-post type gutenberg blocks",
+	"ancestor": [
+		"create-block/tmy-event-single"
+	],
 	"attributes": {
-		"title": {
-			"type": "string",
-			"source": "html",
-			"selector": "h2"
-		},
-		"date": {
-			"type": "string",
-			"source": "html",
-			"selector": "strong"
-		},
-		"content": {
-			"type": "string",
-			"source": "html",
-			"selector": "p"
-		},
-		"images": {
+		"events": {
 			"type": "array",
 			"default": []
 		}
@@ -36,5 +24,6 @@
 	"textdomain": "tmy",
 	"editorScript": "file:../../build/events.js",
 	"editorStyle": "file:../../build/events.css",
-	"style": "file:../../build/style-events.css"
+	"style": "file:../../build/style-events.css",
+	"script": "file:../../build/events_frontend.js"
 }

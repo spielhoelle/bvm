@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/tmy-event-single",
+	"version": "0.1.0",
+	"title": "event-single",
+	"category": "text",
+	"icon": "flag",
+	"description": "WP plugin for displaying custom-post type gutenberg blocks",
+	"parent": [
+		"create-block/tmy-events"
+	],
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": "h5"
+		},
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		},
+		"images": {
+			"type": "array",
+			"default": []
+		},
+		"direction": {
+			"type": "string",
+			"default": "left",
+			"enum": [
+				"left",
+				"right"
+			]
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": true,
+		"anchor": true
+	},
+	"textdomain": "tmy",
+	"editorScript": "file:../../build/event-single.js",
+	"editorStyle": "file:../../build/event-single.css",
+	"style": "file:../../build/style-event-single.css"
+}
