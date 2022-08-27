@@ -46,7 +46,6 @@ function Edit(props) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
     className: 'event-single'
   });
-  console.log('attributes', attributes);
   const hasImages = attributes.images.length > 0;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "event-single-wrapper"
@@ -75,8 +74,8 @@ function Edit(props) {
       icon: "format-gallery"
     }),
     labels: {
-      title: 'Partners Gallery',
-      instructions: 'Create an awesome partners gallery.'
+      title: 'Event Gallery',
+      instructions: 'Create an awesome Event gallery.'
     },
     onSelect: newImages => setAttributes({
       images: newImages
@@ -96,7 +95,7 @@ function Edit(props) {
       } = _ref;
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToolbarButton, {
         onClick: open
-      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Edit partners pictures', 'events-gallery'));
+      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Edit event pictures', 'events-gallery'));
     }
   })))));
 }

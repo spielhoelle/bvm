@@ -26,6 +26,7 @@ function create_block_tmy_block_init()
 		'employees',
 		'employee-single',
 		'events',
+		'event-single',
 		'jobs',
 		'miniimage',       
 		'partners',

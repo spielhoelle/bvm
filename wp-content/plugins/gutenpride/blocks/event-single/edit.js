@@ -25,7 +25,6 @@ export default function Edit(props) {
   const blockProps = useBlockProps({
     className: 'event-single',
   })
-  console.log('attributes', attributes);
   const hasImages = attributes.images.length > 0
   return (
     <div {...blockProps}>
@@ -55,8 +54,8 @@ export default function Edit(props) {
             gallery
             icon={<BlockIcon icon="format-gallery" />}
             labels={{
-              title: 'Partners Gallery',
-              instructions: 'Create an awesome partners gallery.',
+              title: 'Event Gallery',
+              instructions: 'Create an awesome Event gallery.',
             }}
             onSelect={(newImages) => setAttributes({ images: newImages })}
           />
@@ -75,7 +74,7 @@ export default function Edit(props) {
               value={attributes.images.map((image) => image.id)}
               render={({ open }) => (
                 <ToolbarButton onClick={open}>
-                  {__('Edit partners pictures', 'events-gallery')}
+                  {__('Edit event pictures', 'events-gallery')}
                 </ToolbarButton>
               )}
             />

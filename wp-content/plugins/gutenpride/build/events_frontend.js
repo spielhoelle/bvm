@@ -37,8 +37,7 @@ docReady(() => {
       Array.from(document.querySelectorAll('.event-single-wrapper')).map((myElement, index) => {
         if (myElement) {
           if (myElement.getBoundingClientRect().top < window.scrollY + window.innerHeight && window.scrollY < window.pageYOffset + myElement.getBoundingClientRect().top + myElement.clientHeight) {
-            console.log('myElement.getBoundingClientRect().top', myElement.querySelector('.event-single-text h5').innerHTML, myElement.getBoundingClientRect().top);
-
+            // console.log('myElement.getBoundingClientRect().top', myElement.querySelector('.event-single-text h5').innerHTML, myElement.getBoundingClientRect().top);
             if (myElement.getBoundingClientRect().top <= 100) {
               Array.from(document.querySelectorAll('.events-text')).map(t => t.classList.add('hidden'));
               document.querySelectorAll('.events-text')[index].classList.remove('hidden');
