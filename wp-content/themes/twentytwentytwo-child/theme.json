@@ -1,6 +1,42 @@
 {
 	"version": 2,
 	"settings": {
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Asap",
+					"slug": "asap",
+					"name": "Asap",
+					"fontFace": [
+						{
+							"fontFamily": "Asap",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [
+								"file:./fonts/Asap/Asap-VariableFont_wght.ttf"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "Unna",
+					"slug": "unna",
+					"name": "Unna",
+					"fontFace": [
+						{
+							"fontFamily": "Unna",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [
+								"file:./fonts/Unna/Unna-Regular.ttf"
+							]
+						}
+					]
+				}
+			]
+		},
 		"color": {
 			"palette": [
 				{
