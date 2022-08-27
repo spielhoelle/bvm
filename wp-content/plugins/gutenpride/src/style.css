@@ -1,0 +1,21 @@
+/**
+ * The following styles get applied inside the frontend only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+/* @font-face {
+	font-family: Asap;
+	src: url('./fonts/Asap/Asap-VariableFont_wght.ttf');
+	font-weight: normal;
+}
+
+
+@font-face {
+	font-family: Unna;
+	src: url('./fonts/Unna/Unna-Regular.ttf');
+	font-weight: normal;
+} */
+body {
+	--wp--preset--font-family--asap: Asap;
+	--wp--preset--font-family--unna: Unna;
+}
