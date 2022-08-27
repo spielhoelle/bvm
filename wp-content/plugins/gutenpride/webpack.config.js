@@ -12,5 +12,6 @@ module.exports = {
     miniimage: './blocks/miniimage',
     partners: './blocks/partners',
     veranstaltungen: './blocks/veranstaltungen/',
+    "language-switcher": './blocks/language-switcher/',
   },
-};
+}

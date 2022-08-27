@@ -14,6 +14,11 @@
  * @package           create-block
  */
 
+
+# server side rendered block
+require_once(__DIR__ . '/blocks/language-switcher/language-switcher.php');
+
+# dynamic blocks
 function create_block_tmy_block_init()
 {
 	$blocks = array(

@@ -1,0 +1,14 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/tmy-language-switcher",
+	"version": "0.1.0",
+	"title": "language-switcher",
+	"category": "text",
+	"icon": "flag",
+	"description": "WP plugin for displaying custom-post type gutenberg blocks",
+	"textdomain": "tmy",
+	"editorScript": "file:../../build/language-switcher.js",
+	"editorStyle": "file:../../build/language-switcher.css",
+	"style": "file:../../build/style-language-switcher.css"
+}
