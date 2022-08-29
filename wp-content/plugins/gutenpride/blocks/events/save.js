@@ -9,7 +9,7 @@ export default function save(props) {
       <div className="events-wrapper">
         <InnerBlocks.Content />
       </div>
-      <div className="workbox">
+      <div className="events-workbox">
         {props.attributes.events.map((block, index) => (
           <div className={`events-text ${index !== 0 ? `hidden` : ``}`}>
             {block.attributes.content}

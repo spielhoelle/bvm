@@ -7,7 +7,7 @@
 	}
 }
 
-.workbox {
+.events-workbox {
 	position: sticky;
 	top: 0;
 	.events-text {
@@ -20,7 +20,10 @@
 		text-align: center;
 		font-family: var(--wp--preset--font-family--unna);
 		color: var(--wp--preset--color--secondary);
-		font-size: 54px;
+		font-size: 24px;
+		.events-text-box {
+			padding: 0 100px 10px 100px;
+		}
 	}
 	&:after {
 		content: "";

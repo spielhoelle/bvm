@@ -33,10 +33,12 @@ export default function Edit(props) {
           renderAppender={() => <InnerBlocks.ButtonBlockAppender />}
         />
       </div>
-      <div className="workbox">
+      <div className="events-workbox">
         {blocks.map((block, index) => (
-          <div className="events-text">
-            {block.attributes.content}
+          <div key={block.attributes.title} className={`events-text ${index !== 0 ? `hidden` : ``}`}>
+            <div className="events-text-box">
+              {block.attributes.content}
+            </div>
           </div>
         ))}
         <svg viewBox="0 0 100 100" width="100" height="100" style={{ "transform": "rotate(90deg)" }}>
@@ -63,6 +65,6 @@ export default function Edit(props) {
           </text>
         </svg>
       </div>
-    </div >
+    </div>
   )
 }

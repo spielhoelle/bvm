@@ -1,1 +1,0 @@
-{"version":3,"file":"language-switcher.css","mappings":";;;AAAA;EACC;EACA;EACA;EACA;AACD;AAAC;EACC;AAEF,C","sources":["webpack://tmy/./blocks/language-switcher/editor.scss"],"sourcesContent":[".polylang_langswitcher {\n\tlist-style: none;\n\ttext-align: right;\n\tdisplay: flex;\n\tjustify-content: flex-end;\n\tli {\n\t\tmargin: 0 10px;\n\t}\n}\n"],"names":[],"sourceRoot":""}

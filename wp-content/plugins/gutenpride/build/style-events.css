@@ -10,12 +10,12 @@
   flex: 50%;
 }
 
-.workbox {
+.events-workbox {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
-.workbox .events-text {
+.events-workbox .events-text {
   position: absolute;
   top: 50%;
   right: 0;
@@ -25,9 +25,12 @@
   text-align: center;
   font-family: var(--wp--preset--font-family--unna);
   color: var(--wp--preset--color--secondary);
-  font-size: 54px;
+  font-size: 24px;
 }
-.workbox:after {
+.events-workbox .events-text .events-text-box {
+  padding: 0 100px 10px 100px;
+}
+.events-workbox:after {
   content: "";
   position: absolute;
   width: 60%;
@@ -39,14 +42,14 @@
   top: 50%;
   border-radius: 50%;
 }
-.workbox svg {
+.events-workbox svg {
   background: #fff;
   border-radius: 50%;
   height: 100%;
   width: 100%;
   transition: transform 0.5s ease;
 }
-.workbox svg textPath {
+.events-workbox svg textPath {
   font-size: 4px;
 }
 
