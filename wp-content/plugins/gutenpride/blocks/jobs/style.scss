@@ -1,9 +1,20 @@
-#jobs {
+.jobs {
+	h2 {
+		margin: 16px 0;
+		font-size: 26px !important;
+	}
 	a {
 		text-decoration: none;
 		color: var(--wp--preset--color--secondary);
+	}	
+	table {
+		width: 100%;
 	}
-	span {
-		float: right;
+	td {
+		width: 50%;
+	}
+	img {
+		margin-left: 20px;
+		width: 80px;
 	}
 }

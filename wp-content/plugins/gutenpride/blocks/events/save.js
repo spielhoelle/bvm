@@ -11,7 +11,7 @@ export default function save(props) {
       </div>
       <div className="events-workbox">
         {props.attributes.events.map((block, index) => (
-          <div className={`events-text ${index !== 0 ? `hidden` : ``}`}>
+          <div key={block.attributes.title} className={`events-text ${index !== 0 ? `hidden` : ``}`}>
             {block.attributes.content}
           </div>
         ))}

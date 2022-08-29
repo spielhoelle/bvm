@@ -22,17 +22,30 @@ export default function Edit(props) {
       setAttributes({ jobpages: jobpages.map(p => ({ id: p.id, link: p.link, title: p.title.raw })) })
     }
   }
+  const blockProps = useBlockProps({
+    className: 'jobs',
+  })
   return (
-    <div {...useBlockProps()}>
+    <div {...blockProps}>
       {attributes.jobpages.length === 0 && (
         <h2>Select some Job pages on the left</h2>
       )}
-      {posts && attributes.jobpages.map((job) => (
-        <h2 key={job.link}>
-          <a href={job.link}>{job.title}</a>
-          <img alt="arrow" src={arrow} />
-        </h2>
-      ))}
+      <table>
+        {posts && attributes.jobpages.map((job) => (
+          <tr>
+            <td>
+              <a href={job.link}>
+                <h2 key={job.link}>
+                  {job.title}
+                </h2>
+              </a>
+            </td>
+            <td>
+              <img alt="arrow" src={arrow} />
+            </td>
+          </tr>
+        ))}
+      </table>
       <InspectorControls>
         <PanelBody title={__('General', 'partners-gallery')} initialOpen>
           <SelectControl
