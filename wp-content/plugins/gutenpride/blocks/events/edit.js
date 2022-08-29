@@ -1,91 +1,70 @@
-import { __ } from '@wordpress/i18n';
+import { __ } from '@wordpress/i18n'
 import {
   useBlockProps,
-  RichText,
-  MediaPlaceholder,
-  BlockIcon,
-  BlockControls,
-  MediaUploadCheck,
-  MediaUpload,
-} from '@wordpress/block-editor';
-import { ToolbarButton, ToolbarGroup } from '@wordpress/components';
+  InnerBlocks,
+} from '@wordpress/block-editor'
 
+const ALLOWED_BLOCK_TYPES = ['create-block/tmy-event-single']
+let ran = 0
 export default function Edit(props) {
   const {
-    attributes,
+    clientId,
+    // attributes,
     setAttributes,
-  } = props;
-  const onChangeContent = (newContent) => {
-    setAttributes({ content: newContent });
-  };
-  const onChangeDate = (newDate) => {
-    setAttributes({ date: newDate });
-  };
-  const onChangeTitle = (newTitle) => {
-    setAttributes({ title: newTitle });
-  };
-  const hasImages = attributes.images.length > 0;
+  } = props
+  const blockProps = useBlockProps({
+    className: 'events',
+  })
+  const { getBlockOrder, getBlock } = wp.data.select('core/block-editor')
+  const innerBlockIds = getBlockOrder(clientId)
+  const blocks = []
+  innerBlockIds.forEach((innerBlockId) => {
+    blocks.push(getBlock(innerBlockId))
+  })
+  if (ran === 0) {
+    ran = 1
+    setAttributes({ events: blocks })
+  }
   return (
-    <div {...useBlockProps()}>
+    <div {...blockProps}>
       <div className="events-wrapper">
-        <div className="events-1">
-          <RichText
-            tagName="h2"
-            onChange={onChangeTitle}
-            value={attributes.title}
-            placeholder={__('Title...')}
-          />
-          <RichText
-            tagName="strong"
-            onChange={onChangeDate}
-            value={attributes.date}
-            placeholder={__('Date...')}
-          />
-          <RichText
-            tagName="p"
-            onChange={onChangeContent}
-            value={attributes.content}
-            placeholder={__('Content...')}
-          />
-        </div>
-        {hasImages && attributes.images.map((image, index) => (
-          <figure className={`events-${index + 2}`}>
-            <img alt={image.url} key={image.url} src={image.url} />
-          </figure>
-        ))}
-        {!hasImages && (
-        <MediaPlaceholder
-          multiple
-          gallery
-          icon={<BlockIcon icon="format-gallery" />}
-          labels={{
-            title: 'Partners Gallery',
-            instructions: 'Create an awesome partners gallery.',
-          }}
-          onSelect={(newImages) => setAttributes({ images: newImages })}
+        <InnerBlocks
+          allowedBlocks={ALLOWED_BLOCK_TYPES}
+          renderAppender={() => <InnerBlocks.ButtonBlockAppender />}
         />
-        )}
-
       </div>
-      <BlockControls>
-        <ToolbarGroup>
-          <MediaUploadCheck>
-            <MediaUpload
-              multiple
-              gallery
-              addToGallery
-              onSelect={(newImages) => setAttributes({ images: newImages })}
-              allowedTypes={['image']}
-              value={attributes.images.map((image) => image.id)}
-              render={({ open }) => (
-                <ToolbarButton onClick={open}>
-                  {__('Edit partners pictures', 'events-gallery')}
-                </ToolbarButton>
-              )}
+      <div className="events-workbox">
+        {blocks.map((block, index) => (
+          <div key={block.attributes.title} className={`events-text ${index !== 0 ? `hidden` : ``}`}>
+            <div className="events-text-box">
+              {block.attributes.content}
+            </div>
+          </div>
+        ))}
+        <svg viewBox="0 0 100 100" width="100" height="100" style={{ "transform": "rotate(90deg)" }}>
+          <defs>
+            <path
+              id="circle"
+              d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
             />
-          </MediaUploadCheck>
-        </ToolbarGroup>
-      </BlockControls>
+          </defs>
+          <text>
+            <textPath xlinkHref="#circle">
+              {blocks.map((block, index) => (
+                <tspan
+                  key={block.attributes.title}
+                  xmlSpace="preserve"
+                  fill={index === 0 ? "#CB8E00" : "black"}
+                >
+                  {' '}
+                  {block.attributes.title}
+                  {' '}
+                </tspan>
+              ))}
+            </textPath>
+          </text>
+        </svg>
+      </div>
     </div>
-  );
+  )
 }

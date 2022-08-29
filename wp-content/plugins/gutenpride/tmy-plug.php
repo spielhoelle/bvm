@@ -14,6 +14,11 @@
  * @package           create-block
  */
 
+
+# server side rendered block
+require_once(__DIR__ . '/blocks/language-switcher/language-switcher.php');
+
+# dynamic blocks
 function create_block_tmy_block_init()
 {
 	$blocks = array(
@@ -21,6 +26,7 @@ function create_block_tmy_block_init()
 		'employees',
 		'employee-single',
 		'events',
+		'event-single',
 		'jobs',
 		'miniimage',       
 		'partners',
@@ -32,3 +38,10 @@ function create_block_tmy_block_init()
 	}
 }
 add_action('init', 'create_block_tmy_block_init');
+
+function wpdocs_theme_name_scripts()
+{
+	wp_register_style('style-name', plugins_url('src/style.css',__FILE__));
+	wp_enqueue_style('style-name');
+}
+add_action('wp_enqueue_scripts', 'wpdocs_theme_name_scripts');
