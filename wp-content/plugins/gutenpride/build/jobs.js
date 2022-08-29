@@ -22,6 +22,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _arrow_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./arrow.png */ "./blocks/jobs/arrow.png");
+
 
 
 
@@ -32,33 +34,47 @@ function Edit(props) {
     attributes,
     setAttributes
   } = props;
-  let posts = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select('core').getEntityRecords('postType', 'page'), []);
-  let options = [];
+  const posts = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select('core').getEntityRecords('postType', 'page'), []);
 
-  if (posts) {
-    posts = posts.filter(p => p.template === 'jobs');
-    options = posts.map(p => ({
-      label: p.title.raw,
-      value: p.id
-    }));
-  }
+  const onChangeContent = jobPageIds => {
+    const numberedJobpageIds = jobPageIds.map(j => Number(j));
 
-  const onChangeContent = job => {
-    attributes.jobpages.push(job);
-    setAttributes({
-      jobpages: attributes.jobpages
-    });
+    if (jobPageIds.length !== 0) {
+      const jobpages = posts.filter(p => numberedJobpageIds.includes(p.id));
+      setAttributes({
+        jobpages: jobpages.map(p => ({
+          id: p.id,
+          link: p.link,
+          title: p.title.raw
+        }))
+      });
+    }
   };
 
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), attributes.jobpages.length === 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "Select some Job pages on the left"), attributes.jobpages.map(job => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, posts.find(p => p.id === job))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), attributes.jobpages.length === 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "Select some Job pages on the left"), posts && attributes.jobpages.map(job => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
+    key: job.link
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    href: job.link
+  }, job.title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    alt: "arrow",
+    src: _arrow_png__WEBPACK_IMPORTED_MODULE_5__
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('General', 'partners-gallery'),
     initialOpen: true
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
+    style: {
+      'height': 100
+    },
     multiple: true,
-    value: attributes.direction,
+    value: attributes.jobpages.map(j => j.id),
     label: "Pages",
-    options: options,
-    onChange: job => onChangeContent(job),
+    options: (posts || []).filter(p => p.template === 'jobs').map(p => ({
+      label: p.title.raw,
+      value: p.id
+    })),
+    onChange: job => {
+      onChangeContent(job);
+    },
     __nextHasNoMarginBottom: true
   }))));
 }
@@ -108,11 +124,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _arrow_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./arrow.png */ "./blocks/jobs/arrow.png");
+
 
 
 function save(props) {
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save();
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, "Jobs jooo");
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, props.attributes.jobpages.map(job => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
+    key: job.link
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    href: job.link
+  }, job.title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    alt: "arrow",
+    src: _arrow_png__WEBPACK_IMPORTED_MODULE_2__
+  }))));
 }
 
 /***/ }),
@@ -138,6 +163,16 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+
+/***/ }),
+
+/***/ "./blocks/jobs/arrow.png":
+/*!*******************************!*\
+  !*** ./blocks/jobs/arrow.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "images/arrow.20ec4a42.png";
 
 /***/ }),
 
@@ -289,6 +324,18 @@ module.exports = window["wp"]["i18n"];
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -303,6 +350,26 @@ module.exports = window["wp"]["i18n"];
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
