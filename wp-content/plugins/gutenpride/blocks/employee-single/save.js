@@ -5,11 +5,11 @@ export default function save(props) {
   const { attributes } = props;
   return (
     <div {...blockProps}>
-      <div className={`employee-single-wrapper ${attributes.direction}`}>
+      <div className={`employee-single-wrapper ${attributes.direction} ${!attributes.image ? `hovered` : ``}`}>
         <div className="employee-single-text">
           <div className="employee-single-text-wrapper">
             <RichText.Content
-              tagName="h2"
+              tagName="h3"
               value={attributes.title}
             />
             <RichText.Content
@@ -18,9 +18,11 @@ export default function save(props) {
             />
           </div>
         </div>
-        <figure className={`employee-single-image`}>
-          <img alt={attributes.image} src={attributes.image} />
-        </figure>
+        {!!attributes.image && (
+          <figure className={`employee-single-image`}>
+            <img alt={attributes.image} src={attributes.image} />
+          </figure>
+        )}
       </div>
     </div>
   );

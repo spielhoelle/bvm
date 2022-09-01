@@ -1,4 +1,31 @@
-.employees {
+.employees .block-editor-inner-blocks{
+	width: 100%;
+}
+.employees, .employees .block-editor-block-list__layout {
+	position: relative;
 	display: flex;
-	gap: 5px;
+	gap: 20px;
+	width: 100%;
+}
+.employees {
+	margin: 10px !important;
+}
+.employees.left {
+	justify-content: flex-start;
+}
+.employees.right {
+	justify-content: flex-end;
+}
+.employees .circle {
+	pointer-events: none;
+	background-color: white;
+	position: absolute;
+	width: 90vw;
+	height: 0;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	padding-bottom: 90vw;
 }

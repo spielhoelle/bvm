@@ -20,6 +20,7 @@ export default function Edit(props) {
   const {
     attributes,
     setAttributes,
+    isSelected,
   } = props
   const onChangeContent = (newContent) => {
     setAttributes({ content: newContent })
@@ -29,11 +30,11 @@ export default function Edit(props) {
   }
   return (
     <div {...useBlockProps()}>
-      <div className={`employee-single-wrapper ${attributes.direction}`}>
+      <div className={`employee-single-wrapper ${attributes.direction} ${!attributes.image || isSelected ? `hovered` : ``}`}>
         <div className="employee-single-text">
           <div className="employee-single-text-wrapper">
             <RichText
-              tagName="h2"
+              tagName="h3"
               onChange={onChangeTitle}
               value={attributes.title}
               placeholder={__('Title...')}

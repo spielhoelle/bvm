@@ -29,18 +29,21 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 	left: 0;
 	z-index: 1;
 	width: 100%;
+	pointer-events: none;
 }
 
-.uppernav:first-child {
+.uppernav > *:first-child {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+	pointer-events: all;
 }
 
-.uppernav:last-child {
+.uppernav > *:last-child {
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	width: 100%;
+	pointer-events: all;
 }

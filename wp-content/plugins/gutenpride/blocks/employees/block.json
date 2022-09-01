@@ -9,9 +9,21 @@
 	"description": "WP plugin for displaying custom-post type gutenberg blocks",
 	"attributes": {
 		"employees": {
-            "type": "array",
-            "default": []
-		}		
+			"type": "array",
+			"default": []
+		},
+		"hascircle": {
+			"type": "boolean",
+			"default": false
+		},
+		"direction": {
+			"type": "string",
+			"default": "left",
+			"enum": [
+				"left",
+				"right"
+			]
+		}
 	},
 	"supports": {
 		"html": false,

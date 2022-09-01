@@ -27,7 +27,8 @@ __webpack_require__.r(__webpack_exports__);
 function Edit(props) {
   const {
     attributes,
-    setAttributes
+    setAttributes,
+    isSelected
   } = props;
 
   const onChangeContent = newContent => {
@@ -43,13 +44,13 @@ function Edit(props) {
   };
 
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `employee-single-wrapper ${attributes.direction}`
+    className: `employee-single-wrapper ${attributes.direction} ${!attributes.image || isSelected ? `hovered` : ``}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "employee-single-text"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "employee-single-text-wrapper"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
-    tagName: "h2",
+    tagName: "h3",
     onChange: onChangeTitle,
     value: attributes.title,
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Title...')
@@ -161,18 +162,18 @@ function save(props) {
     attributes
   } = props;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `employee-single-wrapper ${attributes.direction}`
+    className: `employee-single-wrapper ${attributes.direction} ${!attributes.image ? `hovered` : ``}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "employee-single-text"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "employee-single-text-wrapper"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
-    tagName: "h2",
+    tagName: "h3",
     value: attributes.title
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     tagName: "p",
     value: attributes.content
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", {
+  }))), !!attributes.image && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", {
     className: `employee-single-image`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     alt: attributes.image,
