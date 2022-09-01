@@ -18,3 +18,29 @@ Twenty Twenty-Two Child WordPress Theme, (C) 2021 WordPress.org
 Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 */
 
+
+.uppernav {
+	height: 100vh;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+}
+
+.uppernav:first-child {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.uppernav:last-child {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
