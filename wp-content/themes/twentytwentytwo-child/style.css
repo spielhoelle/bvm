@@ -18,7 +18,9 @@ Twenty Twenty-Two Child WordPress Theme, (C) 2021 WordPress.org
 Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 */
 
-
+a {
+	text-decoration: none;
+}
 .uppernav {
 	height: 100vh;
 	display: flex;

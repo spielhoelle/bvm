@@ -14,8 +14,8 @@
 }
 .wp-block-create-block-tmy-employee-single img,
 .wp-block-create-block-tmy-employee-single .components-placeholder {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   transition: border-radius 0.3s ease;
@@ -33,7 +33,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 250px;
+  width: 200px;
   height: 100%;
   transition: all 0.3s ease;
   border-radius: 50%;
@@ -57,7 +57,7 @@
 }
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper:hover.left,
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper.hovered.left {
-  padding-right: 250px;
+  padding-right: 200px;
 }
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper:hover.left .employee-single-text,
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper.hovered.left .employee-single-text {
@@ -65,7 +65,7 @@
 }
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper:hover.right,
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper.hovered.right {
-  padding-left: 250px;
+  padding-left: 200px;
 }
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper:hover.right .employee-single-text,
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper.hovered.right .employee-single-text {
