@@ -18,8 +18,8 @@ Twenty Twenty-Two Child WordPress Theme, (C) 2021 WordPress.org
 Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 */
 
-a {
-	text-decoration: none;
+a, a:hover, a:active {
+	text-decoration: none !important;
 }
 
 .uppernav {
@@ -27,7 +27,7 @@ a {
 	display: flex;
 	flex-flow: column;
 	justify-content: space-between;
-	position: fixed;
+	position: fixed !important;
 	top: 0;
 	left: 0;
 	z-index: 1;
@@ -50,10 +50,33 @@ a {
 
 .uppernav .wp-block-navigation__container {
 	flex-flow: row !important;
-	transform: translateX(100%) rotate(90deg);
+	transform: translate(100%, 9px) rotate(90deg);
 	transform-origin: top left;
+	background-color: white !important;
+	padding: 0px 15px 0px 30px;
+	border-radius: 15px;
+	z-index: -1;
+	pointer-events: all;
 }
 
+.wp-block-navigation__responsive-container-open {
+	pointer-events: all;
+}
+
+.wp-block-navigation__responsive-container-close {
+	background: #D2A117;
+	pointer-events: all;
+	border-radius: 50%;
+	/* position: relative !important; */
+}
+
+.wp-block-navigation__responsive-container-content {
+	padding: 0 !important;
+}
+
+html.has-modal-open {
+	overflow: visible !important;
+}
 .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
 	background-color: transparent;
 	width: 100%;
@@ -61,6 +84,8 @@ a {
 	top: 0px;
 	right: 0px;
 	height: 80vh;
+	padding: 0 !important;
+	pointer-events: none;
 }
 
 .uppernav nav {
