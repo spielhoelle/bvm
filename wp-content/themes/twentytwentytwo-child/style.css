@@ -21,6 +21,7 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 a {
 	text-decoration: none;
 }
+
 .uppernav {
 	height: 100vh;
 	display: flex;
@@ -34,18 +35,47 @@ a {
 	pointer-events: none;
 }
 
-.uppernav > *:first-child {
+.uppernav>*:first-child {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	pointer-events: all;
+	padding: 20px;
 }
 
-.uppernav > *:last-child {
+.admin-bar .uppernav>*:first-child {
+	padding-top: 52px;
+}
+
+.uppernav .wp-block-navigation__container {
+	flex-flow: row !important;
+	transform: translateX(100%) rotate(90deg);
+	transform-origin: top left;
+}
+
+.wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+	background-color: transparent;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 80vh;
+}
+
+.uppernav nav {
+	position: relative;
+}
+
+.uppernav>*:last-child {
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	pointer-events: all;
+	padding: 20px;
+}
+
+.polylang_langswitcher {
+	text-transform: uppercase;
 }

@@ -8,6 +8,7 @@ function create_block_tmy_language_switcher_block_init_render_callback($block_at
 			'show_names' => 1,
 			'hide_if_empty' => 0,
 			'echo'       => 0,
+			'display_names_as' => 'slug',
 		];
 		$output = '<ul class="polylang_langswitcher">' . pll_the_languages($args) . '</ul>';
 	}
