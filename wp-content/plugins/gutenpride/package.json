@@ -24,6 +24,7 @@
 		"eslint-plugin-react-hooks": "^4.5.0"
 	},
 	"dependencies": {
+		"@10up/block-components": "^1.11.0",
 		"@wordpress/server-side-render": "^3.5.0"
 	}
 }

@@ -15,5 +15,6 @@ module.exports = {
     partners: './blocks/partners',
     veranstaltungen: './blocks/veranstaltungen/',
     "language-switcher": './blocks/language-switcher/',
+    "heading": './extentions/heading/',
   },
 }

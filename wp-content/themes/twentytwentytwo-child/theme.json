@@ -80,6 +80,13 @@
 					"slug": "default-filter",
 					"name": "Default filter"
 				}
+			],
+			"gradients": [
+				{
+					"slug": "vertical-secondary-to-tertiary",
+					"gradient": "linear-gradient(0deg, #FFFFFF 0%, #F7F5EE 100%)",
+					"name": "Vertical secondary to tertiary"
+				}
 			]
 		},
 		"layout": {
@@ -102,6 +109,14 @@
 		}
 	],
 	"styles": {
+		"blocks": {
+			"core/heading": {
+				"typography": {
+					"fontFamily": "",
+					"fontSize": ""
+				}
+			}
+		},
 		"elements": {
 			"h1": {
 				"typography": {

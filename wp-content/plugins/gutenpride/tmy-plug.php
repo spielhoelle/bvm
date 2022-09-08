@@ -28,7 +28,7 @@ function create_block_tmy_block_init()
 		'events',
 		'event-single',
 		'jobs',
-		'miniimage',       
+		'miniimage',
 		'partners',
 		'veranstaltungen'
 	);
@@ -41,7 +41,22 @@ add_action('init', 'create_block_tmy_block_init');
 
 function wpdocs_theme_name_scripts()
 {
-	wp_register_style('style-name', plugins_url('src/style.css',__FILE__));
+	wp_register_style('style-name', plugins_url('src/style.css', __FILE__));
 	wp_enqueue_style('style-name');
+	wp_register_style('heading-name', plugins_url('build/style-heading.css', __FILE__));
+	wp_enqueue_style('heading-name');
 }
 add_action('wp_enqueue_scripts', 'wpdocs_theme_name_scripts');
+
+function myguten_enqueue()
+{
+	$heading_path = plugins_url('build/heading.js', __FILE__);
+	wp_enqueue_script('custom_js', $heading_path, array(), false);
+}
+
+add_action('enqueue_block_editor_assets', 'myguten_enqueue');
+add_action('after_setup_theme', function () {
+	$version = 3;
+	add_theme_support('editor-styles');
+	add_editor_style('editor.css');
+});

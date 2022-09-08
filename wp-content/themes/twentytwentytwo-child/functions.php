@@ -1,4 +1,5 @@
 <?php
+// require_once('./gutenpride/tmy-plug.php');
 add_action('after_setup_theme', function () {
 	add_theme_support('align-wide');
 	// add_theme_support('wp-block-styles');

@@ -1,9 +1,0 @@
-import './style.scss';
-import '../blocks/employees';
-import '../blocks/veranstaltungen';
-import '../blocks/jobs';
-import '../blocks/partners';
-import '../blocks/events';
-import '../blocks/miniimage';
-import '../blocks/circletext';
-import '../blocks/language-switcher';
