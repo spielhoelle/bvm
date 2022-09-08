@@ -17,6 +17,10 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 Twenty Twenty-Two Child WordPress Theme, (C) 2021 WordPress.org
 Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 */
+body {
+	--wp--preset--font-size--medium: 20px;
+	--wp--custom--typography--font-size--gigantic: 59px;
+}
 
 a, a:hover, a:active {
 	text-decoration: none !important;
@@ -77,6 +81,7 @@ a, a:hover, a:active {
 html.has-modal-open {
 	overflow: visible !important;
 }
+
 .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
 	background-color: transparent;
 	width: 100%;
