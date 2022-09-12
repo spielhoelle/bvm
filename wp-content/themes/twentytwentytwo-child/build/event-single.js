@@ -179,7 +179,7 @@ function save(props) {
     value: attributes.content
   })), hasImages && attributes.images.map((image, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", {
     key: image.url,
-    className: `events-${index + 2}`
+    className: `events-${index + 1}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     alt: image.url,
     src: image.url

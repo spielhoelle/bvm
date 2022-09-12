@@ -20,7 +20,7 @@ export default function save(props) {
           />
         </div>
         {hasImages && attributes.images.map((image, index) => (
-          <figure key={image.url} className={`events-${index + 2}`}>
+          <figure key={image.url} className={`events-${index + 1}`}>
             <img alt={image.url} src={image.url} />
           </figure>
         ))}
