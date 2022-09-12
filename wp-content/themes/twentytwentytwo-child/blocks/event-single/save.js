@@ -8,7 +8,7 @@ export default function save(props) {
   const hasImages = attributes.images.length > 0
   return (
     <div {...blockProps}>
-      <div className="event-single-wrapper">
+      <div className={`event-single-wrapper ${attributes.imagelayout}`}>
         <div className="event-single-text hidden">
           <RichText.Content
             tagName="h5"
