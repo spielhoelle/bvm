@@ -24,14 +24,14 @@
 		color: var(--wp--preset--color--secondary);
 		font-size: 24px;
 		.events-text-box {
-			padding: 0 100px 10px 100px;
+			padding: 0 130px 10px 130px;
 		}
 	}
 	&:after {
 		content: "";
 		position: absolute;
-		width: 60%;
-		height: 60%;
+		width: 55%;
+		height: 55%;
 		left: 50%;
 		right: 50%;
 		transform: translate(-50%, -50%);

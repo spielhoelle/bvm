@@ -1,20 +1,26 @@
 import { __ } from '@wordpress/i18n'
 import {
   useBlockProps,
-  RichText,
   MediaPlaceholder,
   BlockIcon,
   BlockControls,
   MediaUploadCheck,
   MediaUpload,
+  InspectorControls,
 } from '@wordpress/block-editor'
-import { ToolbarButton, ToolbarGroup } from '@wordpress/components'
+
+import {
+  SelectControl,
+  ToolbarButton,
+  ToolbarGroup,
+  TextControl,
+  PanelBody,
+} from '@wordpress/components'
 
 export default function Edit(props) {
   const {
     attributes,
     setAttributes,
-    isSelected
   } = props
   const onChangeContent = (newContent) => {
     setAttributes({ content: newContent })
@@ -28,23 +34,9 @@ export default function Edit(props) {
   const hasImages = attributes.images.length > 0
   return (
     <div {...blockProps}>
-      <div className="event-single-wrapper">
-        <div className={`event-single-text ${isSelected ? `` : ``}`}>
-          <RichText
-            tagName="h5"
-            onChange={onChangeTitle}
-            value={attributes.title}
-            placeholder={__('Title...')}
-          />
-          <RichText
-            tagName="p"
-            onChange={onChangeContent}
-            value={attributes.content}
-            placeholder={__('Content...')}
-          />
-        </div>
+      <div className={`event-single-wrapper ${attributes.imagelayout}`}>
         {hasImages && attributes.images.map((image, index) => (
-          <figure key={image.url} className={`events-${index + 2}`}>
+          <figure key={image.url} className={`events-${index + 1}`}>
             <img alt={image.url} src={image.url} />
           </figure>
         ))}
@@ -74,13 +66,37 @@ export default function Edit(props) {
               value={attributes.images.map((image) => image.id)}
               render={({ open }) => (
                 <ToolbarButton onClick={open}>
-                  {__('Edit event pictures', 'events-gallery')}
+                  {__('Edit event pictures', 'event-single')}
                 </ToolbarButton>
               )}
             />
           </MediaUploadCheck>
         </ToolbarGroup>
       </BlockControls>
+      <InspectorControls>
+        <PanelBody title={__('General', 'event-single')} initialOpen>
+          <TextControl
+            onChange={onChangeTitle}
+            value={attributes.title}
+            label={__("Title", "event-single")}
+          />
+          <TextControl
+            onChange={onChangeContent}
+            value={attributes.content}
+            label={__("Content", "event-single")}
+            placeholder={__('Content...')}
+          />
+          <SelectControl
+            value={attributes.imagelayout}
+            options={[
+              { value: 'imagelayout-1', label: 'Layout 1' },
+              { value: 'imagelayout-2', label: 'Layout 2' },
+            ]}
+            label={__('Image layout', 'event-single')}
+            onChange={(newImageLayout) => setAttributes({ imagelayout: newImageLayout })}
+          />
+        </PanelBody>
+      </InspectorControls>
     </div>
   )
 }

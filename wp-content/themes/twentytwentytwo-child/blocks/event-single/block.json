@@ -25,12 +25,12 @@
 			"type": "array",
 			"default": []
 		},
-		"direction": {
+		"imagelayout": {
 			"type": "string",
-			"default": "left",
+			"default": "imagelayout-1",
 			"enum": [
-				"left",
-				"right"
+				"imagelayout-1",
+				"imagelayout-2"
 			]
 		}
 	},
