@@ -7,7 +7,7 @@
 }
 .jobs a {
   text-decoration: none;
-  color: var(--wp--preset--color--secondary);
+  color: var(--wp--preset--color--black) !important;
 }
 .jobs table {
   width: 100%;

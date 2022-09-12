@@ -26,7 +26,7 @@ const eventsScrollAnimation = (workbox) => {
             if (myElement.getBoundingClientRect().top <= 100) {
               Array.from(document.querySelectorAll('.events-text')).map((t) => t.classList.add('hidden'))
               document.querySelectorAll('.events-text')[index].classList.remove('hidden')
-              const rotateTo = (tspanOffsets[index] + widthOfTspans[index]) / 2 / circleLength * 360
+              const rotateTo = (tspanOffsets[index] + ( widthOfTspans[index]) / 2 ) / circleLength * 360
               document.querySelector('.events .events-workbox svg').style.transform = `rotate(${(rotateTo * -1) + 90}deg)`
               tspans.forEach((tspan) => {
                 tspan.setAttribute('fill', "black")
