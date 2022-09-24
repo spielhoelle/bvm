@@ -74,7 +74,7 @@ function Edit(props) {
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("text", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("textPath", {
     xlinkHref: "#circlesubtext"
   }, attributes.circlesubtext))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('General', 'gutenpride'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('General'),
     initialOpen: true
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
     value: attributes.direction,
@@ -85,7 +85,7 @@ function Edit(props) {
       value: 'right',
       label: 'right'
     }],
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Rotation direction', 'gutenpride'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Rotation direction'),
     onChange: newDirection => setAttributes({
       direction: newDirection
     })

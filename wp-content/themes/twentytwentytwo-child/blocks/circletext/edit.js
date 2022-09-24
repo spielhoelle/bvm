@@ -77,14 +77,14 @@ export default function Edit(props) {
         )}
       </p>
       <InspectorControls>
-        <PanelBody title={__('General', 'gutenpride')} initialOpen>
+        <PanelBody title={__('General')} initialOpen>
           <SelectControl
             value={attributes.direction}
             options={[
               { value: 'left', label: 'left' },
               { value: 'right', label: 'right' },
             ]}
-            label={__('Rotation direction', 'gutenpride')}
+            label={__('Rotation direction')}
             onChange={(newDirection) => setAttributes({ direction: newDirection })}
           />
         </PanelBody>

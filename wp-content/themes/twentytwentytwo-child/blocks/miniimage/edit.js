@@ -3,6 +3,7 @@ import {
 } from '@wordpress/block-editor';
 import {
   SelectControl,
+  RangeControl,
   PanelBody, ToolbarButton, ToolbarGroup,
 } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
@@ -17,19 +18,19 @@ export default function Edit(props) {
     <>
       <div {...useBlockProps()}>
         {hasImages && (
-          <figure className={`miniimage-gallery-inner-container ${attributes.direction}`}>
+          <figure style={{ "width": `${attributes.size}%` }} className={`miniimage-gallery-inner-container ${attributes.direction}`}>
             <img alt={attributes.miniImage} src={attributes.miniImage} />
           </figure>
         )}
         {!hasImages && (
-        <MediaPlaceholder
-          icon={<BlockIcon icon="format-gallery" />}
-          labels={{
-            title: 'Partners Gallery',
-            instructions: 'Create an awesome miniimage gallery.',
-          }}
-          onSelect={(newImages) => setAttributes({ miniImage: newImages.url })}
-        />
+          <MediaPlaceholder
+            icon={<BlockIcon icon="format-gallery" />}
+            labels={{
+              title: 'Partners Gallery',
+              instructions: 'Create an awesome miniimage gallery.',
+            }}
+            onSelect={(newImages) => setAttributes({ miniImage: newImages.url })}
+          />
         )}
       </div>
       <BlockControls>
@@ -41,7 +42,7 @@ export default function Edit(props) {
               value={attributes.miniImage}
               render={({ open }) => (
                 <ToolbarButton onClick={open}>
-                  {__('Edit miniimage pictures', 'miniimage-gallery')}
+                  {__('Manage Images')}
                 </ToolbarButton>
               )}
             />
@@ -49,16 +50,23 @@ export default function Edit(props) {
         </ToolbarGroup>
       </BlockControls>
       <InspectorControls>
-        <PanelBody title={__('General', 'partners-gallery')} initialOpen>
+        <PanelBody title={__('General')} initialOpen>
+          <RangeControl
+            label={__('Size')}
+            value={attributes.size}
+            min="0"
+            max="100"
+            onChange={(set) => setAttributes({ size: set })}
+          />
           <SelectControl
             value={attributes.direction}
             options={[
-              { value: 'left-top', label: 'left-top' },
-              { value: 'right-top', label: 'right-top' },
-              { value: 'right-bottom', label: 'right-bottom' },
-              { value: 'left-bottom', label: 'left-bottom' },
+              { value: 'left-top', label: 'Left top' },
+              { value: 'right-top', label: 'Right top' },
+              { value: 'right-bottom', label: 'Right bottom' },
+              { value: 'left-bottom', label: 'Left bottom' },
             ]}
-            label={__('Direction', 'partners-gallery')}
+            label={__('Align')}
             onChange={(newDirection) => setAttributes({ direction: newDirection })}
           />
         </PanelBody>

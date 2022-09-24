@@ -1,4 +1,5 @@
 import { registerBlockExtension } from '@10up/block-components'
+import { __ } from '@wordpress/i18n';
 import {
   PanelBody,
   ToggleControl,
@@ -29,9 +30,9 @@ function LightboxBlockEdit(props) {
 
   return (
     <InspectorControls>
-      <PanelBody title="Font Options">
+      <PanelBody title="Font">
         <ToggleControl
-          label="Alternative font"
+          label={__("Alternative font")}
           checked={isAltFont}
           onChange={(value) => {
             setAttributes({ isAltFont: value })

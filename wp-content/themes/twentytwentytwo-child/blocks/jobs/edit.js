@@ -47,7 +47,7 @@ export default function Edit(props) {
         ))}
       </table>
       <InspectorControls>
-        <PanelBody title={__('General', 'partners-gallery')} initialOpen>
+        <PanelBody title={__('General', 'gutenberg')} initialOpen>
           <SelectControl
             style={{ 'height': 100 }}
             multiple

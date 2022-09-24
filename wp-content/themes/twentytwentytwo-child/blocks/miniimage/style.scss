@@ -7,19 +7,21 @@
 		z-index: 9999999;
 		&.left-bottom {
 			left: 0;
-			bottom: 0;
+			top: 0;
 		}
 		&.right-bottom {
 			right: 0;
-			bottom: 0;
+			top: 0;
+			text-align: right;
 		}
 		&.left-top {
 			left: 0;
-			top: 0;
+			bottom: 0;
 		}
 		&.right-top {
+			text-align: right;
 			right: 0;
-			top: 0;
+			bottom: 0;
 		}
 		img {
 			object-fit: contain;

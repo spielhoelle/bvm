@@ -33,6 +33,9 @@ function Edit(props) {
   } = props;
   const hasImages = attributes.miniImage;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(), hasImages && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", {
+    style: {
+      "width": `${attributes.size}%`
+    },
     className: `miniimage-gallery-inner-container ${attributes.direction}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     alt: attributes.miniImage,
@@ -60,27 +63,35 @@ function Edit(props) {
       } = _ref;
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
         onClick: open
-      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Edit miniimage pictures', 'miniimage-gallery'));
+      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Manage Images'));
     }
   })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('General', 'partners-gallery'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('General'),
     initialOpen: true
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Size'),
+    value: attributes.size,
+    min: "0",
+    max: "100",
+    onChange: set => setAttributes({
+      size: set
+    })
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
     value: attributes.direction,
     options: [{
       value: 'left-top',
-      label: 'left-top'
+      label: 'Left top'
     }, {
       value: 'right-top',
-      label: 'right-top'
+      label: 'Right top'
     }, {
       value: 'right-bottom',
-      label: 'right-bottom'
+      label: 'Right bottom'
     }, {
       value: 'left-bottom',
-      label: 'left-bottom'
+      label: 'Left bottom'
     }],
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Direction', 'partners-gallery'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Align'),
     onChange: newDirection => setAttributes({
       direction: newDirection
     })

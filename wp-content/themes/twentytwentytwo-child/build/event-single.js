@@ -82,19 +82,19 @@ function Edit(props) {
       } = _ref;
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToolbarButton, {
         onClick: open
-      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Edit event pictures', 'event-single'));
+      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Edit event pictures', 'gutenpride'));
     }
   })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('General', 'event-single'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('General', 'gutenpride'),
     initialOpen: true
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
     onChange: onChangeTitle,
     value: attributes.title,
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Title", "event-single")
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Title", "gutenpride")
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
     onChange: onChangeContent,
     value: attributes.content,
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Content", "event-single"),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Content", "gutenpride"),
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Content...')
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
     value: attributes.imagelayout,
@@ -105,7 +105,7 @@ function Edit(props) {
       value: 'imagelayout-2',
       label: 'Layout 2'
     }],
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Image layout', 'event-single'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Image layout', 'gutenpride'),
     onChange: newImageLayout => setAttributes({
       imagelayout: newImageLayout
     })

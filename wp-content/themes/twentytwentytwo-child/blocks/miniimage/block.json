@@ -12,6 +12,10 @@
 			"type": "string",
 			"default": null
 		},
+		"size": {
+			"type": "number",
+			"default": 100
+		},
 		"direction": {
 			"type": "string",
 			"default": "left-top",

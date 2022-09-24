@@ -59,7 +59,7 @@ export default function Edit(props) {
               value={attributes.images.map((image) => image.id)}
               render={({ open }) => (
                 <ToolbarButton onClick={open}>
-                  {__('Edit partners pictures', 'partners-gallery')}
+                  {__('Edit partners pictures', 'gutenberg')}
                 </ToolbarButton>
               )}
             />
@@ -67,7 +67,7 @@ export default function Edit(props) {
         </ToolbarGroup>
       </BlockControls>
       <InspectorControls>
-        <PanelBody title={__('General', 'partners-gallery')} initialOpen>
+        <PanelBody title={__('General', 'gutenberg')} initialOpen>
 
           <PanelColorSettings
             title={__('Color settings')}

@@ -66,7 +66,7 @@ export default function Edit(props) {
               value={attributes.images.map((image) => image.id)}
               render={({ open }) => (
                 <ToolbarButton onClick={open}>
-                  {__('Edit event pictures', 'event-single')}
+                  {__('Edit event pictures', 'gutenpride')}
                 </ToolbarButton>
               )}
             />
@@ -74,16 +74,16 @@ export default function Edit(props) {
         </ToolbarGroup>
       </BlockControls>
       <InspectorControls>
-        <PanelBody title={__('General', 'event-single')} initialOpen>
+        <PanelBody title={__('General', 'gutenpride')} initialOpen>
           <TextControl
             onChange={onChangeTitle}
             value={attributes.title}
-            label={__("Title", "event-single")}
+            label={__("Title", "gutenpride")}
           />
           <TextControl
             onChange={onChangeContent}
             value={attributes.content}
-            label={__("Content", "event-single")}
+            label={__("Content", "gutenpride")}
             placeholder={__('Content...')}
           />
           <SelectControl
@@ -92,7 +92,7 @@ export default function Edit(props) {
               { value: 'imagelayout-1', label: 'Layout 1' },
               { value: 'imagelayout-2', label: 'Layout 2' },
             ]}
-            label={__('Image layout', 'event-single')}
+            label={__('Image layout', 'gutenpride')}
             onChange={(newImageLayout) => setAttributes({ imagelayout: newImageLayout })}
           />
         </PanelBody>
