@@ -6,8 +6,7 @@ import {
 import {
   SelectControl,
   PanelBody,
-  ToolbarButton,
-  ToolbarGroup,
+  RangeControl,
 } from '@wordpress/components'
 import { __ } from '@wordpress/i18n'
 import './style.scss'
@@ -40,8 +39,8 @@ export default function Edit(props) {
             />
           </>
         ) : (
-          <>
-            <svg viewBox="0 0 100 100" width="100" height="100" data-direction={attributes.direction}>
+          <p className="circletext-text" data-speed={attributes.speed} data-direction={attributes.direction}>
+            <svg viewBox="0 0 100 100" width="100" height="100">
               <defs>
                 <path
                   id="circle"
@@ -59,7 +58,7 @@ export default function Edit(props) {
                 </textPath>
               </text>
             </svg>
-            <svg viewBox="0 0 100 100" width="100" height="100" className="second_circle" data-direction={attributes.direction}>
+            <svg viewBox="0 0 100 100" width="100" height="100" className="second_circle">
               <defs>
                 <path
                   id="circlesubtext"
@@ -67,13 +66,13 @@ export default function Edit(props) {
             M 40 40 m -23 0 a 23 23 0 1 1 46 0 a 23 23 0 1 1 -46 0"
                 />
               </defs>
-              <text>
+              <text className="has-primary-font">
                 <textPath xlinkHref="#circlesubtext">
                   {attributes.circlesubtext}
                 </textPath>
               </text>
             </svg>
-          </>
+          </p>
         )}
       </p>
       <InspectorControls>
@@ -86,6 +85,13 @@ export default function Edit(props) {
             ]}
             label={__('Rotation direction')}
             onChange={(newDirection) => setAttributes({ direction: newDirection })}
+          />
+          <RangeControl
+            label={__('Size')}
+            value={attributes.speed}
+            min="-500"
+            max="500"
+            onChange={(set) => setAttributes({ speed: set })}
           />
         </PanelBody>
       </InspectorControls>

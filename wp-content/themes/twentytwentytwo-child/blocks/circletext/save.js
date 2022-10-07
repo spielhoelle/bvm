@@ -8,8 +8,8 @@ export default function save(props) {
   return (
     <div {...blockProps}>
       {attributes.circletext && (
-        <p className="circletext-text">
-          <svg viewBox="0 0 100 100" width="100" height="100">
+        <p className="circletext-text" data-speed={attributes.speed} data-direction={attributes.direction}>
+          <svg viewBox="0 0 100 100" width="100" height="100" >
             <defs>
               <path
                 id="circle"
@@ -27,7 +27,7 @@ export default function save(props) {
               </textPath>
             </text>
           </svg>
-          <svg viewBox="0 0 100 100" width="100" height="100" class="second_circle">
+          <svg viewBox="0 0 100 100" width="100" height="100" className="second_circle">
             <defs>
               <path
                 id="circlesubtext"
@@ -35,7 +35,7 @@ export default function save(props) {
             M 40 40 m -23 0 a 23 23 0 1 1 46 0 a 23 23 0 1 1 -46 0"
               />
             </defs>
-            <text>
+            <text className="has-primary-font">
               <textPath xlinkHref="#circlesubtext">
                 {attributes.circlesubtext}
               </textPath>

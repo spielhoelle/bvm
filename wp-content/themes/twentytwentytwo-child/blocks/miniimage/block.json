@@ -14,7 +14,7 @@
 		},
 		"size": {
 			"type": "number",
-			"default": 100
+			"default": 0
 		},
 		"direction": {
 			"type": "string",

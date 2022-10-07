@@ -20,12 +20,16 @@ document.addEventListener('scroll', e => {
       if (myElement) {
         if (myElement.getBoundingClientRect().top < window.scrollY + window.innerHeight && window.scrollY < window.pageYOffset + myElement.getBoundingClientRect().top + myElement.clientHeight) {
           const scrolledDown = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
-          const direction = myElement.dataset.direction === "right" ? -1 : 1;
+          const direction = myElement.parentElement.dataset.direction === "right" ? -1 : 1;
+          const {
+            speed
+          } = myElement.parentElement.dataset;
+          const multiplier = Number(speed) / 100 + 1;
 
           if (myElement.classList.contains('second_circle')) {
-            myElement.style.transform = `rotate(${scrolledDown * 3.6 * direction}deg) scale(0.7)`;
+            myElement.style.transform = `rotate(${scrolledDown * 3.6 * direction * multiplier}deg) scale(0.7)`;
           } else {
-            myElement.style.transform = `rotate(${scrolledDown * 3.6 * direction}deg)`;
+            myElement.style.transform = `rotate(${scrolledDown * 3.6 * direction * multiplier}deg)`;
           }
         }
       }

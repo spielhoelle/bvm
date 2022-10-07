@@ -52,11 +52,14 @@ function Edit(props) {
     },
     value: attributes.circlesubtext,
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Title...')
-  })) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  })) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "circletext-text",
+    "data-speed": attributes.speed,
+    "data-direction": attributes.direction
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
     viewBox: "0 0 100 100",
     width: "100",
-    height: "100",
-    "data-direction": attributes.direction
+    height: "100"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("defs", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
     id: "circle",
     d: " M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
@@ -66,12 +69,13 @@ function Edit(props) {
     viewBox: "0 0 100 100",
     width: "100",
     height: "100",
-    className: "second_circle",
-    "data-direction": attributes.direction
+    className: "second_circle"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("defs", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
     id: "circlesubtext",
     d: " M 40 40 m -23 0 a 23 23 0 1 1 46 0 a 23 23 0 1 1 -46 0"
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("text", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("textPath", {
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("text", {
+    className: "has-primary-font"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("textPath", {
     xlinkHref: "#circlesubtext"
   }, attributes.circlesubtext))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('General'),
@@ -88,6 +92,14 @@ function Edit(props) {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Rotation direction'),
     onChange: newDirection => setAttributes({
       direction: newDirection
+    })
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Size'),
+    value: attributes.speed,
+    min: "-500",
+    max: "500",
+    onChange: set => setAttributes({
+      speed: set
     })
   }))));
 }
@@ -147,7 +159,9 @@ function save(props) {
     attributes
   } = props;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, attributes.circletext && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "circletext-text"
+    className: "circletext-text",
+    "data-speed": attributes.speed,
+    "data-direction": attributes.direction
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
     viewBox: "0 0 100 100",
     width: "100",
@@ -161,11 +175,13 @@ function save(props) {
     viewBox: "0 0 100 100",
     width: "100",
     height: "100",
-    class: "second_circle"
+    className: "second_circle"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("defs", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
     id: "circlesubtext",
     d: " M 40 40 m -23 0 a 23 23 0 1 1 46 0 a 23 23 0 1 1 -46 0"
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("text", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("textPath", {
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("text", {
+    className: "has-primary-font"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("textPath", {
     xlinkHref: "#circlesubtext"
   }, attributes.circlesubtext)))));
 }

@@ -18,7 +18,7 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 */
 body {
 	--wp--preset--font-size--medium: 20px;
-	--wp--custom--typography--font-size--gigantic: 59px;
+	--wp--custom--typography--font-size--gigantic: 52px;
 }
 
 a, a:hover, a:active {
@@ -47,8 +47,23 @@ a, a:hover, a:active {
 	padding: 20px;
 }
 
-.admin-bar .uppernav>*:first-child {
-	padding-top: 52px;
+.uppernav nav {
+	position: relative;
+}
+
+.uppernav>*:last-child {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	pointer-events: none;
+	padding: 20px;
+	/* z-index: 0; */
+}
+
+.uppernav a,
+.uppernav .lang-item {
+	pointer-events: all;
 }
 
 .uppernav .wp-block-navigation__container {
@@ -60,6 +75,10 @@ a, a:hover, a:active {
 	pointer-events: all;
 	height: 52px;
 	align-items: center !important;
+}
+
+.admin-bar .uppernav>*:first-child {
+	padding-top: 52px;
 }
 
 .block-editor-block-content-overlay.wp-block-navigation__container.block-editor-block-list__layout {
@@ -128,26 +147,19 @@ html.has-modal-open {
 	pointer-events: none;
 }
 
-.uppernav nav {
-	position: relative;
-}
-
-.uppernav>*:last-child {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	pointer-events: all;
-	padding: 20px;
-}
 
 
 .polylang_langswitcher {
 	text-transform: uppercase;
+	padding: 0;
 }
 
 .has-alt-font {
 	font-family: var(--wp--preset--font-family--asap) !important;
+}
+
+.has-primary-font {
+	font-family: var(--wp--preset--font-family--unna) !important;
 }
 
 .bvm-footer {
