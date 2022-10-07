@@ -7,7 +7,7 @@
 }
 .wp-block-create-block-tmy-miniimage .miniimage-gallery-inner-container {
   position: absolute;
-  z-index: 9999999;
+  z-index: 2;
 }
 .wp-block-create-block-tmy-miniimage .miniimage-gallery-inner-container.left-bottom {
   left: 0;

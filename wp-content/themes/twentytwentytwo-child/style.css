@@ -33,7 +33,7 @@ a, a:hover, a:active {
 	position: fixed !important;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 3;
 	width: 100%;
 	pointer-events: none;
 }
@@ -160,4 +160,9 @@ html.has-modal-open {
 	.bvm-footer {
 		margin-block-end: 90px !important;
 	}
+}
+
+.wp-block-social-links .wp-social-link {
+	background-color: var(--wp--preset--color--secondary) !important;
+
 }
