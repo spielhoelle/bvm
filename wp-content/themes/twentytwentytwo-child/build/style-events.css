@@ -27,16 +27,17 @@
   text-align: center;
   font-family: var(--wp--preset--font-family--unna);
   color: var(--wp--preset--color--secondary);
-  font-size: 24px;
+  font-size: 40px;
 }
 .events-workbox .events-text .events-text-box {
   padding: 0 130px 10px 130px;
+  white-space: pre-wrap;
 }
 .events-workbox:after {
   content: "";
   position: absolute;
-  width: 55%;
-  height: 55%;
+  width: 60%;
+  height: 60%;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);

@@ -14,6 +14,7 @@ import {
   ToolbarButton,
   ToolbarGroup,
   TextControl,
+  TextareaControl,
   PanelBody,
 } from '@wordpress/components'
 
@@ -80,7 +81,7 @@ export default function Edit(props) {
             value={attributes.title}
             label={__("Title", "gutenpride")}
           />
-          <TextControl
+          <TextareaControl
             onChange={onChangeContent}
             value={attributes.content}
             label={__("Content", "gutenpride")}

@@ -91,7 +91,7 @@ function Edit(props) {
     onChange: onChangeTitle,
     value: attributes.title,
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Title", "gutenpride")
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextareaControl, {
     onChange: onChangeContent,
     value: attributes.content,
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Content", "gutenpride"),

@@ -70,7 +70,7 @@ function Edit(props) {
     }
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("defs", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
     id: "circle",
-    d: "M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+    d: "M 60 60 m -40 0 a 40 40 0 1 1 80 0 a 40 40 0 1 1 -80 0"
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("text", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("textPath", {
     xlinkHref: "#circle"
   }, blocks.map((block, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("tspan", {

@@ -1,13 +1,12 @@
-/** style.scss **/
 .wp-block-create-block-tmy-partners {
 	overflow: hidden;
 	position: relative;
 
 	.partners-gallery-inner-container {
-		display:grid;
-		grid-auto-flow:column dense; 
-		grid-template-rows:50px 50px;
-		grid-auto-columns:50px;
+		display: grid;
+		grid-auto-flow: column dense;
+		grid-template-rows: 50px 50px;
+		grid-auto-columns: 100px;
 		justify-content: space-between;
 		margin: 0;
 		img {

@@ -23,12 +23,10 @@ $image_size: 200px;
 	p {
 		font-size: 20px !important;
 	}
+
 	.employee-single-text {
 		border-radius: 50%;
 		z-index: -1;
-		position: absolute;
-		top: 0;
-		left: 0;
 		width: $image_size;
 		height: 100%;
 		transition: all 0.3s ease;
@@ -66,7 +64,15 @@ $image_size: 200px;
 			}
 		}
 	}
+	.employee-single-wrapper:not(.hovered) {
+		.employee-single-text {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
 }
+
 body:not(.editor-styles-wrapper) {
 	.employee-single-wrapper.hovered {
 		&.left,
