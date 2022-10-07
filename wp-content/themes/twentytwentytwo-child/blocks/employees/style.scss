@@ -9,6 +9,9 @@
 }
 .employees {
 	margin: 10px !important;
+	@media (max-width: 720px) {
+		flex-wrap: wrap;
+	}
 }
 .employees.left {
 	justify-content: flex-start;

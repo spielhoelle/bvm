@@ -7,6 +7,12 @@
   position: relative;
   transition: all 0.3s ease;
 }
+@media (max-width: 720px) {
+  .wp-block-create-block-tmy-employee-single {
+    flex: 40%;
+    justify-content: center;
+  }
+}
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper {
   position: relative;
   z-index: 0;
@@ -67,6 +73,20 @@
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper:hover.right .employee-single-text,
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper.hovered.right .employee-single-text {
   margin-right: 50%;
+}
+@media (max-width: 720px) {
+  .wp-block-create-block-tmy-employee-single .employee-single-wrapper.left {
+    padding-right: 200px;
+  }
+  .wp-block-create-block-tmy-employee-single .employee-single-wrapper.left .employee-single-text {
+    margin-left: 50%;
+  }
+  .wp-block-create-block-tmy-employee-single .employee-single-wrapper.right {
+    padding-left: 200px;
+  }
+  .wp-block-create-block-tmy-employee-single .employee-single-wrapper.right .employee-single-text {
+    margin-right: 50%;
+  }
 }
 .wp-block-create-block-tmy-employee-single .employee-single-wrapper:not(.hovered) .employee-single-text {
   position: absolute;

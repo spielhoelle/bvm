@@ -4,6 +4,10 @@ $image_size: 200px;
 	gap: 10px;
 	position: relative;
 	transition: all 0.3s ease;
+	@media (max-width: 720px) {
+		flex: 40%;
+		justify-content: center;
+	}
 	.employee-single-wrapper {
 		position: relative;
 		z-index: 0;
@@ -61,6 +65,22 @@ $image_size: 200px;
 			padding-left: $image_size;
 			.employee-single-text {
 				margin-right: 50%;
+			}
+		}
+	}
+	@media (max-width: 720px) {
+		.employee-single-wrapper {
+			&.left {
+				padding-right: $image_size;
+				.employee-single-text {
+					margin-left: 50%;
+				}
+			}
+			&.right {
+				padding-left: $image_size;
+				.employee-single-text {
+					margin-right: 50%;
+				}
 			}
 		}
 	}
