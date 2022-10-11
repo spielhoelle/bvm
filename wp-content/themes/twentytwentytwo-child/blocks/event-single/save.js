@@ -10,7 +10,8 @@ export default function save(props) {
     <div {...blockProps}>
       <div className={`event-single-wrapper`}>
         <div className={`imagegrid ${attributes.imagelayout}`}>
-          <div className="event-single-text hidden">
+          {/* TODO why do this shit has to be here when I dont need it? Otherwise it doesnt save it to DB */}
+          <div className="event-single-text d-none">
             <RichText.Content
               tagName="h5"
               value={attributes.title}
@@ -18,6 +19,10 @@ export default function save(props) {
             <RichText.Content
               tagName="p"
               value={attributes.content}
+            />
+            <RichText.Content
+              tagName="h3"
+              value={attributes.subtitle}
             />
           </div>
           {hasImages && attributes.images.map((image, index) => (

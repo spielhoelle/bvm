@@ -183,3 +183,6 @@ html.has-modal-open {
 	background-color: var(--wp--preset--color--secondary) !important;
 
 }
+.d-none {
+	display: none;
+}

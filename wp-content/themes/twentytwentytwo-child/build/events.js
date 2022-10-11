@@ -61,9 +61,7 @@ function Edit(props) {
   }, blocks.map((block, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     key: block.attributes.title,
     className: `events-text ${index !== 0 ? `hidden` : ``}`
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "events-text-box"
-  }, block.attributes.content))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  }, block.attributes.content)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
     viewBox: "0 0 100 100",
     width: "100",
     height: "100",

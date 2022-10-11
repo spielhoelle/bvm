@@ -34,36 +34,36 @@ export default function Edit(props) {
         />
       </div>
       <div className="events-workbox">
-        {blocks.map((block, index) => (
-          <div key={block.attributes.title} className={`events-text ${index !== 0 ? `hidden` : ``}`}>
-            <div className="events-text-box">
+        <div className="events-workbox-container">
+          {blocks.map((block, index) => (
+            <div key={block.attributes.title} className={`events-text ${index !== 0 ? `hidden` : ``}`}>
               {block.attributes.content}
             </div>
-          </div>
-        ))}
-        <svg viewBox="0 0 100 100" width="100" height="100" style={{ "transform": "rotate(90deg)" }}>
-          <defs>
-            <path
-              id="circle"
-              d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-            />
-          </defs>
-          <text>
-            <textPath xlinkHref="#circle">
-              {blocks.map((block, index) => (
-                <tspan
-                  key={block.attributes.title}
-                  xmlSpace="preserve"
-                  fill={index === 0 ? "#CB8E00" : "black"}
-                >
-                  {' '}
-                  {block.attributes.title}
-                  {' '}
-                </tspan>
-              ))}
-            </textPath>
-          </text>
-        </svg>
+          ))}
+          <svg viewBox="0 0 100 100" width="100" height="100" style={{ "transform": "rotate(90deg)" }}>
+            <defs>
+              <path
+                id="circle"
+                d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+              />
+            </defs>
+            <text>
+              <textPath xlinkHref="#circle">
+                {blocks.map((block, index) => (
+                  <tspan
+                    key={block.attributes.title}
+                    xmlSpace="preserve"
+                    fill={index === 0 ? "#CB8E00" : "black"}
+                  >
+                    {' '}
+                    {block.attributes.title}
+                    {' '}
+                  </tspan>
+                ))}
+              </textPath>
+            </text>
+          </svg>
+        </div>
       </div>
     </div>
   )

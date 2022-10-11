@@ -30,7 +30,7 @@
   height: 100%;
 }
 .event-single-wrapper .subtitle {
-  padding: 0;
+  padding: 10px 0 30px;
 }
 
 figure {
