@@ -87,7 +87,7 @@ export default function Edit(props) {
             onChange={(newDirection) => setAttributes({ direction: newDirection })}
           />
           <RangeControl
-            label={__('Size')}
+            label={__('Speed')}
             value={attributes.speed}
             min="-500"
             max="500"

@@ -21,7 +21,7 @@
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 130px 130px 130px;
+  grid-auto-rows: 180px;
 }
 .event-single-wrapper .imagegrid img:not(.events-icon) {
   width: 100%;
@@ -30,7 +30,7 @@
   height: 100%;
 }
 .event-single-wrapper .subtitle {
-  padding: 10px 0;
+  padding: 0;
 }
 
 figure {

@@ -26,6 +26,9 @@ export default function Edit(props) {
   const onChangeContent = (newContent) => {
     setAttributes({ content: newContent })
   }
+  const onChangeSubtitle = (newSubtitle) => {
+    setAttributes({ subtitle: newSubtitle })
+  }
   const onChangeTitle = (newTitle) => {
     setAttributes({ title: newTitle })
   }
@@ -35,25 +38,29 @@ export default function Edit(props) {
   const hasImages = attributes.images.length > 0
   return (
     <div {...blockProps}>
-      <div className={`event-single-wrapper ${attributes.imagelayout}`}>
-        {hasImages && attributes.images.map((image, index) => (
-          <figure key={image.url} className={`events-${index + 1}`}>
-            <img alt={image.url} src={image.url} />
-          </figure>
-        ))}
-        {!hasImages && (
-          <MediaPlaceholder
-            multiple
-            gallery
-            icon={<BlockIcon icon="format-gallery" />}
-            labels={{
-              title: 'Event Gallery',
-              instructions: 'Create an awesome Event gallery.',
-            }}
-            onSelect={(newImages) => setAttributes({ images: newImages })}
-          />
-        )}
-
+      <div className={`event-single-wrapper`}>
+        <div className={`imagegrid ${attributes.imagelayout}`}>
+          {hasImages && attributes.images.map((image, index) => (
+            <figure key={image.url} className={`events-${index + 1}`}>
+              <img alt={image.url} src={image.url} />
+            </figure>
+          ))}
+          {!hasImages && (
+            <MediaPlaceholder
+              multiple
+              gallery
+              icon={<BlockIcon icon="format-gallery" />}
+              labels={{
+                title: 'Event Gallery',
+                instructions: 'Create an awesome Event gallery.',
+              }}
+              onSelect={(newImages) => setAttributes({ images: newImages })}
+            />
+          )}
+        </div>
+        <div className="subtitle">
+          <h3>{attributes.subtitle}</h3>
+        </div>
       </div>
       <BlockControls>
         <ToolbarGroup>
@@ -87,6 +94,12 @@ export default function Edit(props) {
             label={__("Content", "gutenpride")}
             placeholder={__('Content...')}
           />
+          <TextareaControl
+            onChange={onChangeSubtitle}
+            value={attributes.subtitle}
+            label={__("Subtitle", "gutenpride")}
+            placeholder={__('Subtitle...')}
+          />
           <SelectControl
             value={attributes.imagelayout}
             options={[
@@ -98,6 +111,6 @@ export default function Edit(props) {
           />
         </PanelBody>
       </InspectorControls>
-    </div>
+    </div >
   )
 }

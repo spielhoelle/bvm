@@ -11,10 +11,9 @@
 }
 
 .events-workbox {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  margin-left: 20px;
+  margin-left: 100px;
   overflow: hidden;
 }
 .events-workbox .events-text {

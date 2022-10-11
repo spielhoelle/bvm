@@ -21,6 +21,11 @@
 			"source": "html",
 			"selector": "p"
 		},
+		"subtitle": {
+			"type": "string",
+			"source": "html",
+			"selector": "h3"
+		},
 		"images": {
 			"type": "array",
 			"default": []

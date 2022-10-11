@@ -49,6 +49,12 @@
   padding: 10px 20px 20px 20px;
   text-align: center;
 }
+.wp-block-create-block-tmy-employee-single .employee-single-text .employee-single-text-wrapper h3 {
+  line-height: 1.2;
+}
+.wp-block-create-block-tmy-employee-single .employee-single-text .employee-single-text-wrapper p {
+  font-size: 16px !important;
+}
 .wp-block-create-block-tmy-employee-single .employee-single-text h3,
 .wp-block-create-block-tmy-employee-single .employee-single-text p {
   margin: 0;
