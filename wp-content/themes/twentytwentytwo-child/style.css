@@ -18,7 +18,12 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 */
 body {
 	--wp--preset--font-size--medium: 20px;
+	--wp--custom--typography--font-size--colossal: 59px;
 	--wp--custom--typography--font-size--gigantic: 52px;
+	--wp--custom--typography--font-size--huge: 42px;
+	--wp--custom--typography--font-size--large: 36px;
+	--wp--custom--typography--font-size--medium: 20px;
+	--wp--custom--typography--font-size--small: 13px;
 }
 
 a, a:hover, a:active {

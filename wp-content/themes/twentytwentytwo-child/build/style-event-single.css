@@ -14,19 +14,23 @@
 }
 
 .event-single-wrapper {
+  position: sticky;
+  top: 0;
+}
+.event-single-wrapper .imagegrid {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 130px 130px 130px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
-.event-single-wrapper img:not(.events-icon) {
+.event-single-wrapper .imagegrid img:not(.events-icon) {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+}
+.event-single-wrapper .subtitle {
+  padding: 10px 0;
 }
 
 figure {

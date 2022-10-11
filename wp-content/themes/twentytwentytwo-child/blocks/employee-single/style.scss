@@ -43,6 +43,12 @@ $image_size: 200px;
 		.employee-single-text-wrapper {
 			padding: 10px 20px 20px 20px;
 			text-align: center;
+			h3 {
+				line-height: 1.2;
+			}
+			p {
+				font-size: 16px !important;
+			}
 		}
 		h3,
 		p {
