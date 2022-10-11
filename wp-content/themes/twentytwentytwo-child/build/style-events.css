@@ -27,6 +27,7 @@
   font-family: var(--wp--preset--font-family--unna);
   color: var(--wp--preset--color--secondary);
   font-size: 20px;
+  line-height: 1.2;
   white-space: pre-wrap;
   margin: 0 25% 10px 25%;
 }
