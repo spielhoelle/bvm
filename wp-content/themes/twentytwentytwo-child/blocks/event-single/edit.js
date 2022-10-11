@@ -58,7 +58,7 @@ export default function Edit(props) {
             />
           )}
         </div>
-        <div className="subtitle">
+        <div className="event-single-text">
           <h3>{attributes.subtitle}</h3>
         </div>
       </div>

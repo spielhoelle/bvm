@@ -6,6 +6,7 @@ import {
 
 const ALLOWED_BLOCK_TYPES = ['create-block/tmy-event-single']
 let ran = 0
+const el = wp.element.createElement
 export default function Edit(props) {
   const {
     clientId,
@@ -33,7 +34,7 @@ export default function Edit(props) {
           renderAppender={() => <InnerBlocks.ButtonBlockAppender />}
         />
       </div>
-      <div className="events-workbox">
+      <div className="events-workbox d-none d-md-block">
         <div className="events-workbox-container">
           {blocks.map((block, index) => (
             <div key={block.attributes.title} className={`events-text ${index !== 0 ? `hidden` : ``}`}>

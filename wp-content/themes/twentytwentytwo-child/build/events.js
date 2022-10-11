@@ -23,6 +23,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const ALLOWED_BLOCK_TYPES = ['create-block/tmy-event-single'];
 let ran = 0;
+const el = wp.element.createElement;
 function Edit(props) {
   const {
     clientId,
@@ -55,7 +56,7 @@ function Edit(props) {
     allowedBlocks: ALLOWED_BLOCK_TYPES,
     renderAppender: () => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.ButtonBlockAppender, null)
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "events-workbox"
+    className: "events-workbox d-none d-md-block"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "events-workbox-container"
   }, blocks.map((block, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {

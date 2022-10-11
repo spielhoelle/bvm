@@ -26,9 +26,19 @@
   text-align: center;
   font-family: var(--wp--preset--font-family--unna);
   color: var(--wp--preset--color--secondary);
-  font-size: 40px;
+  font-size: 20px;
   white-space: pre-wrap;
   margin: 0 25% 10px 25%;
+}
+@media (min-width: 768px) {
+  .events-workbox .events-text {
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .events-workbox .events-text {
+    font-size: 40px;
+  }
 }
 .events-workbox .events-text .events-text-box {
   padding: 0 130px 10px 130px;

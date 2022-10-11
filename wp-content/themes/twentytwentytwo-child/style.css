@@ -183,6 +183,25 @@ html.has-modal-open {
 	background-color: var(--wp--preset--color--secondary) !important;
 
 }
+
 .d-none {
 	display: none;
+}
+
+@media (min-width: 720px) {
+	.d-md-none {
+		display: none;
+	}
+}
+
+@media (min-width: 720px) {
+	.d-md-block {
+		display: block;
+	}
+}
+
+@media (max-width: 720px) {
+	.events-workbox {
+		display: none;
+	}
 }
