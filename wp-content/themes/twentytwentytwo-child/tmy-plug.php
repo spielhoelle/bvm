@@ -34,7 +34,9 @@ add_action('wp_enqueue_scripts', 'wpdocs_theme_name_scripts');
 
 function myguten_enqueue()
 {
-	$heading_path = get_stylesheet_directory_uri(). '/build/heading.js';
+	$heading_path = get_stylesheet_directory_uri() . '/build/heading.js';
 	wp_enqueue_script('custom_js', $heading_path, array(), false);
+	$video_path = get_stylesheet_directory_uri() . '/build/video.js';
+	wp_enqueue_script('video_js', $video_path, array(), false);
 }
 add_action('enqueue_block_editor_assets', 'myguten_enqueue');

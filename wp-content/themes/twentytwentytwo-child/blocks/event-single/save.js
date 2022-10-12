@@ -33,10 +33,6 @@ export default function save(props) {
               tagName="h2"
               value={attributes.title}
             />
-            <RichText.Content
-              tagName="p"
-              value={attributes.content}
-            />
             <div className="d-none">
               <RichText.Content
                 tagName="h3"
