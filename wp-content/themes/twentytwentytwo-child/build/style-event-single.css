@@ -8,6 +8,12 @@
 .event-single {
   height: 100vh;
 }
+.event-single video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .event-single h5 {
   margin: 0;

@@ -66,14 +66,23 @@ function Edit(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `event-single-wrapper`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `imagegrid ${attributes.imagelayout}`
-  }, hasImages && attributes.images.map((image, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", {
+    className: `imagegrid ${attributes.imagelayout} gridlength-${attributes.images.length}`
+  }, hasImages && attributes.images.map((image, index) => image.type === "image" ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", {
     key: image.url,
     className: `events-${index + 1}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     alt: image.url,
     src: image.url
-  }))), !hasImages && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaPlaceholder, {
+  })) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("video", {
+    autoplay: true,
+    loop: true,
+    muted: true,
+    key: image.url,
+    className: `events-${index + 1}`
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("source", {
+    src: image.url,
+    type: "video/mp4"
+  }), "Your browser does not support the video tag.")), !hasImages && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaPlaceholder, {
     multiple: true,
     gallery: true,
     icon: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockIcon, {
@@ -90,12 +99,10 @@ function Edit(props) {
     className: "event-single-text"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, attributes.subtitle))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToolbarGroup, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaUpload, {
     multiple: true,
-    gallery: true,
     addToGallery: true,
     onSelect: newImages => setAttributes({
       images: newImages
     }),
-    allowedTypes: ['image'],
     value: attributes.images.map(image => image.id),
     render: _ref => {
       let {
@@ -196,14 +203,23 @@ function save(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `event-single-wrapper`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `imagegrid ${attributes.imagelayout}`
-  }, hasImages && attributes.images.map((image, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", {
+    className: `imagegrid ${attributes.imagelayout} gridlength-${attributes.images.length}`
+  }, hasImages && attributes.images.map((image, index) => image.type === "image" ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", {
     key: image.url,
     className: `events-${index + 1}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     alt: image.url,
     src: image.url
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  })) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("video", {
+    autoplay: true,
+    loop: true,
+    muted: true,
+    key: image.url,
+    className: `events-${index + 1}`
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("source", {
+    src: image.url,
+    type: "video/mp4"
+  }), "Your browser does not support the video tag.")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "event-single-text hidden"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     tagName: "h5",
