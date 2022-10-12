@@ -26,13 +26,18 @@ __webpack_require__.r(__webpack_exports__);
 
 function Edit(props) {
   const {
+    clientId,
     attributes,
     setAttributes
   } = props;
+  const parent = wp.data.select('core/block-editor').getBlockParentsByBlockName(clientId, "create-block/tmy-events")[0];
 
   const onChangeContent = newContent => {
     setAttributes({
       content: newContent
+    });
+    wp.data.dispatch('core/block-editor').updateBlockAttributes(parent, {
+      ran: Date.now()
     });
   };
 
@@ -40,11 +45,17 @@ function Edit(props) {
     setAttributes({
       subtitle: newSubtitle
     });
+    wp.data.dispatch('core/block-editor').updateBlockAttributes(parent, {
+      ran: Date.now()
+    });
   };
 
   const onChangeTitle = newTitle => {
     setAttributes({
       title: newTitle
+    });
+    wp.data.dispatch('core/block-editor').updateBlockAttributes(parent, {
+      ran: Date.now()
     });
   };
 

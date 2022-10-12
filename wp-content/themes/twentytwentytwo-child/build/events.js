@@ -21,13 +21,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const {
+  useEffect
+} = wp.element;
 const ALLOWED_BLOCK_TYPES = ['create-block/tmy-event-single'];
-let ran = 0;
-const el = wp.element.createElement;
 function Edit(props) {
   const {
     clientId,
-    // attributes,
+    attributes,
     setAttributes
   } = props;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
@@ -42,14 +43,11 @@ function Edit(props) {
   innerBlockIds.forEach(innerBlockId => {
     blocks.push(getBlock(innerBlockId));
   });
-
-  if (ran === 0) {
-    ran = 1;
+  useEffect(() => {
     setAttributes({
       events: blocks
     });
-  }
-
+  }, [attributes.ran]);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "events-wrapper"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {

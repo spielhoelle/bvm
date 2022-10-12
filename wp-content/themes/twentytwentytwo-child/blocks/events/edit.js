@@ -3,16 +3,17 @@ import {
   useBlockProps,
   InnerBlocks,
 } from '@wordpress/block-editor'
+const { useEffect } = wp.element;
 
 const ALLOWED_BLOCK_TYPES = ['create-block/tmy-event-single']
-let ran = 0
-const el = wp.element.createElement
+
 export default function Edit(props) {
   const {
     clientId,
-    // attributes,
+    attributes,
     setAttributes,
   } = props
+
   const blockProps = useBlockProps({
     className: 'events',
   })
@@ -22,10 +23,10 @@ export default function Edit(props) {
   innerBlockIds.forEach((innerBlockId) => {
     blocks.push(getBlock(innerBlockId))
   })
-  if (ran === 0) {
-    ran = 1
+  useEffect(() => {
     setAttributes({ events: blocks })
-  }
+  }, [attributes.ran])
+
   return (
     <div {...blockProps}>
       <div className="events-wrapper">

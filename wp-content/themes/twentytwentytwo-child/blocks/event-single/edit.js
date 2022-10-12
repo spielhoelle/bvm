@@ -20,17 +20,23 @@ import {
 
 export default function Edit(props) {
   const {
+    clientId,
     attributes,
     setAttributes,
   } = props
+  const parent = wp.data.select('core/block-editor').getBlockParentsByBlockName(clientId, "create-block/tmy-events")[0]
+
   const onChangeContent = (newContent) => {
     setAttributes({ content: newContent })
+    wp.data.dispatch('core/block-editor').updateBlockAttributes(parent, { ran: Date.now() })
   }
   const onChangeSubtitle = (newSubtitle) => {
     setAttributes({ subtitle: newSubtitle })
+    wp.data.dispatch('core/block-editor').updateBlockAttributes(parent, { ran: Date.now() })
   }
   const onChangeTitle = (newTitle) => {
     setAttributes({ title: newTitle })
+    wp.data.dispatch('core/block-editor').updateBlockAttributes(parent, { ran: Date.now() })
   }
   const blockProps = useBlockProps({
     className: 'event-single',
