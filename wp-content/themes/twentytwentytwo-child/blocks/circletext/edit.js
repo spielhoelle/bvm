@@ -62,8 +62,7 @@ export default function Edit(props) {
               <defs>
                 <path
                   id="circlesubtext"
-                  d="
-            M 40 40 m -23 0 a 23 23 0 1 1 46 0 a 23 23 0 1 1 -46 0"
+                  d="M 50 50 m -33.12 0 a 33.12 33.12 90 1 1 66.24 0 a 33.12 33.12 90 1 1 -66.24 0"
                 />
               </defs>
               <text className="has-primary-font">
