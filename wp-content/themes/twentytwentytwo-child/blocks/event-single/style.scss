@@ -3,8 +3,7 @@
 }
 .event-single {
 	height: 100vh;
-	// position: absolute !important;
-	// top: 0;
+	margin-bottom: 2vh;
 	video {
 		width: 100%;
 		height: 100%;
@@ -16,7 +15,7 @@
 }
 .event-single-wrapper {
 	position: sticky;
-	top: 0;
+	top: 10vh;
 	.imagegrid {
 		display: grid;
 		grid-gap: 10px;
