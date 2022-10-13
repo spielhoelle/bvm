@@ -94,7 +94,7 @@
     margin-right: 50%;
   }
 }
-.wp-block-create-block-tmy-employee-single .employee-single-wrapper:not(.hovered) .employee-single-text {
+.wp-block-create-block-tmy-employee-single .employee-single-wrapper .employee-single-text {
   position: absolute;
   top: 0;
   left: 0;
