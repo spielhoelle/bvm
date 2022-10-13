@@ -49,7 +49,7 @@ export default function Edit(props) {
                 d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
               />
             </defs>
-            <text>
+            <text dy="-4">
               <textPath xlinkHref="#circle">
                 {blocks.map((block, index) => (
                   <tspan

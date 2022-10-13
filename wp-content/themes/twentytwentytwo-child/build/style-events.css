@@ -48,8 +48,8 @@
 .events-workbox:after {
   content: "";
   position: absolute;
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);

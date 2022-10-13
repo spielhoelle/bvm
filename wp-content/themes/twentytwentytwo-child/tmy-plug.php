@@ -15,8 +15,7 @@ function create_block_tmy_block_init()
 		'event-single',
 		'jobs',
 		'miniimage',
-		'partners',
-		'veranstaltungen'
+		'partners'
 	);
 
 	foreach ($blocks as $block) {

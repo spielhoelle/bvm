@@ -7,9 +7,6 @@
 	"category": "text",
 	"icon": "flag",
 	"description": "WP plugin for displaying custom-post type gutenberg blocks",
-	"ancestor": [
-		"create-block/tmy-event-single"
-	],
 	"attributes": {
 		"events": {
 			"type": "array",

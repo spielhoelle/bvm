@@ -13,7 +13,6 @@ module.exports = {
     jobs: './blocks/jobs',
     miniimage: './blocks/miniimage',
     partners: './blocks/partners',
-    veranstaltungen: './blocks/veranstaltungen/',
     "language-switcher": './blocks/language-switcher/',
     "heading": './extentions/heading/',
     "video": './extentions/video/',
