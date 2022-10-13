@@ -54,7 +54,7 @@ export default function Edit(props) {
           <RangeControl
             label={__('Size')}
             value={attributes.size}
-            min="0"
+            min="10"
             max="100"
             onChange={(set) => setAttributes({ size: set })}
           />

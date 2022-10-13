@@ -71,7 +71,7 @@ function Edit(props) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Size'),
     value: attributes.size,
-    min: "0",
+    min: "10",
     max: "100",
     onChange: set => setAttributes({
       size: set
