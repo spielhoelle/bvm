@@ -9,13 +9,21 @@ export default function save(props) {
   return (
     <div {...blockProps}>
       <div className={`event-single-wrapper`}>
-        <div className={`imagegrid ${attributes.imagelayout}`}>
-          {/* TODO why do this shit has to be here when I dont need it? Otherwise it doesnt save it to DB */}
+        <div className={`imagegrid ${attributes.imagelayout} gridlength-${attributes.images.length}`}>
           {hasImages && attributes.images.map((image, index) => (
-            <figure key={image.url} className={`events-${index + 1}`}>
-              <img alt={image.url} src={image.url} />
-            </figure>
-          ))}
+            image.type === "image" ? (
+              <figure key={image.url} className={`events-${index + 1}`}>
+                <img alt={image.url} src={image.url} />
+              </figure>
+            ) : (
+              <video autoplay loop muted key={image.url} className={`events-${index + 1}`}>
+                <source src={image.url} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            )
+          )
+          )}
+          {/* TODO why do this shit has to be here when I dont need it? Otherwise it doesnt save it to DB */}
           <div className="event-single-text hidden">
             <RichText.Content
               tagName="h5"
@@ -32,10 +40,6 @@ export default function save(props) {
             <RichText.Content
               tagName="h2"
               value={attributes.title}
-            />
-            <RichText.Content
-              tagName="p"
-              value={attributes.content}
             />
             <div className="d-none">
               <RichText.Content

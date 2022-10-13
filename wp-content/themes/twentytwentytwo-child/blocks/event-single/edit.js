@@ -20,17 +20,23 @@ import {
 
 export default function Edit(props) {
   const {
+    clientId,
     attributes,
     setAttributes,
   } = props
+  const parent = wp.data.select('core/block-editor').getBlockParentsByBlockName(clientId, "create-block/tmy-events")[0]
+
   const onChangeContent = (newContent) => {
     setAttributes({ content: newContent })
+    wp.data.dispatch('core/block-editor').updateBlockAttributes(parent, { ran: Date.now() })
   }
   const onChangeSubtitle = (newSubtitle) => {
     setAttributes({ subtitle: newSubtitle })
+    wp.data.dispatch('core/block-editor').updateBlockAttributes(parent, { ran: Date.now() })
   }
   const onChangeTitle = (newTitle) => {
     setAttributes({ title: newTitle })
+    wp.data.dispatch('core/block-editor').updateBlockAttributes(parent, { ran: Date.now() })
   }
   const blockProps = useBlockProps({
     className: 'event-single',
@@ -39,12 +45,20 @@ export default function Edit(props) {
   return (
     <div {...blockProps}>
       <div className={`event-single-wrapper`}>
-        <div className={`imagegrid ${attributes.imagelayout}`}>
+        <div className={`imagegrid ${attributes.imagelayout} gridlength-${attributes.images.length}`}>
           {hasImages && attributes.images.map((image, index) => (
-            <figure key={image.url} className={`events-${index + 1}`}>
-              <img alt={image.url} src={image.url} />
-            </figure>
-          ))}
+            image.type === "image" ? (
+              <figure key={image.url} className={`events-${index + 1}`}>
+                <img alt={image.url} src={image.url} />
+              </figure>
+            ) : (
+              <video autoplay loop muted key={image.url} className={`events-${index + 1}`}>
+                <source src={image.url} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            )
+          )
+          )}
           {!hasImages && (
             <MediaPlaceholder
               multiple
@@ -67,10 +81,8 @@ export default function Edit(props) {
           <MediaUploadCheck>
             <MediaUpload
               multiple
-              gallery
               addToGallery
               onSelect={(newImages) => setAttributes({ images: newImages })}
-              allowedTypes={['image']}
               value={attributes.images.map((image) => image.id)}
               render={({ open }) => (
                 <ToolbarButton onClick={open}>
