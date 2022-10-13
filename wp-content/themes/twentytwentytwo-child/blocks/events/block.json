@@ -12,7 +12,11 @@
 			"type": "array",
 			"default": []
 		},
-		"letter-spacing": {
+		"letter_spacing": {
+			"type": "number",
+			"default": 0
+		},
+		"word_spacing": {
 			"type": "number",
 			"default": 0
 		}

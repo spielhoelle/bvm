@@ -22,10 +22,11 @@ export default function save(props) {
               d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
             />
           </defs>
-          <text dy="-4">
+          <text dy="-4" style={{ "letter-spacing": `${props.attributes.letter_spacing / 100}px` }}>
             <textPath xlinkHref="#circle">
               {props.attributes.events.map((block, index) => (
                 <tspan
+                  dx={props.attributes.word_spacing}
                   key={block.attributes.title}
                   xmlSpace="preserve"
                   fill={index === 0 ? "#CB8E00" : "black"}

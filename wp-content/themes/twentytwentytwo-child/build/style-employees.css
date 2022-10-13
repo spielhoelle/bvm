@@ -1,0 +1,42 @@
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/employees/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+.employees, .employees .block-editor-block-list__layout {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.employees {
+  margin: 10px !important;
+}
+@media (max-width: 720px) {
+  .employees {
+    flex-wrap: wrap;
+  }
+}
+
+.employees.left {
+  justify-content: flex-start;
+}
+
+.employees.right {
+  justify-content: flex-end;
+}
+
+.employees .circle {
+  pointer-events: none;
+  background-color: white;
+  position: absolute;
+  width: 90vw;
+  height: 0;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  padding-bottom: 90vw;
+}
+
+/*# sourceMappingURL=style-employees.css.map*/

@@ -58,15 +58,19 @@ export default function Edit(props) {
             <text dy="-4" style={{ "letter-spacing": `${attributes.letter_spacing / 100}px` }}>
               <textPath xlinkHref="#circle">
                 {blocks.map((block, index) => (
-                  <tspan
-                    key={block.attributes.title}
-                    xmlSpace="preserve"
-                    fill={index === 0 ? "#CB8E00" : "black"}
-                  >
+                  <>
+                    <tspan
+                      dx={attributes.word_spacing}
+                      key={block.attributes.title}
+                      xmlSpace="preserve"
+                      fill={index === 0 ? "#CB8E00" : "black"}
+                    >
+                      {' '}
+                      {block.attributes.title}
+                      {' '}
+                    </tspan>
                     {' '}
-                    {block.attributes.title}
-                    {' '}
-                  </tspan>
+                  </>
                 ))}
               </textPath>
             </text>
@@ -81,6 +85,13 @@ export default function Edit(props) {
             min="-100"
             max="100"
             onChange={(set) => setAttributes({ letter_spacing: set })}
+          />
+          <RangeControl
+            label={__('Word spacing')}
+            value={attributes.word_spacing}
+            min="-100"
+            max="100"
+            onChange={(set) => setAttributes({ word_spacing: set })}
           />
         </PanelBody>
       </InspectorControls>
