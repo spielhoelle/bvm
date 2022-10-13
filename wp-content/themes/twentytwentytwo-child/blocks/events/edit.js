@@ -1,7 +1,13 @@
 import { __ } from '@wordpress/i18n'
 import {
+  SelectControl,
+  PanelBody,
+  RangeControl,
+} from '@wordpress/components'
+import {
   useBlockProps,
   InnerBlocks,
+  InspectorControls,
 } from '@wordpress/block-editor'
 const { useEffect } = wp.element;
 
@@ -49,7 +55,7 @@ export default function Edit(props) {
                 d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
               />
             </defs>
-            <text dy="-4">
+            <text dy="-4" style={{ "letter-spacing": `${attributes.letter_spacing / 100}px` }}>
               <textPath xlinkHref="#circle">
                 {blocks.map((block, index) => (
                   <tspan
@@ -67,6 +73,17 @@ export default function Edit(props) {
           </svg>
         </div>
       </div>
+      <InspectorControls>
+        <PanelBody title={__('General')} initialOpen>
+          <RangeControl
+            label={__('Letter spacing')}
+            value={attributes.letter_spacing}
+            min="-100"
+            max="100"
+            onChange={(set) => setAttributes({ letter_spacing: set })}
+          />
+        </PanelBody>
+      </InspectorControls>
     </div>
   )
 }

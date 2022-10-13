@@ -11,6 +11,10 @@
 		"events": {
 			"type": "array",
 			"default": []
+		},
+		"letter-spacing": {
+			"type": "number",
+			"default": 0
 		}
 	},
 	"supports": {
