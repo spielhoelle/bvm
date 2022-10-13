@@ -42,7 +42,7 @@ export default function Edit(props) {
               value={attributes.miniImage}
               render={({ open }) => (
                 <ToolbarButton onClick={open}>
-                  {__('Manage Images')}
+                  {__('Change miniimage')}
                 </ToolbarButton>
               )}
             />

@@ -4,7 +4,7 @@ import {
 import { __ } from '@wordpress/i18n';
 import './style.scss';
 import {
-  PanelBody, ToolbarButton, ToolbarGroup,
+  PanelBody, ToolbarButton, ToolbarGroup, RangeControl,
 } from '@wordpress/components';
 
 export default function Edit(props) {
@@ -18,7 +18,7 @@ export default function Edit(props) {
     if (backgroundColor.class !== undefined) {
       divClass = backgroundColor.class;
     } else {
-      divStyles.color = backgroundColor.color;
+      divStyles.backgroundColor = backgroundColor.color;
     }
   }
 
@@ -27,7 +27,7 @@ export default function Edit(props) {
       <div {...useBlockProps()}>
         {hasImages && (
         <div className={divClass} style={divStyles}>
-          <figure className="partners-gallery-inner-container">
+          <figure className="partners-gallery-inner-container" style={{"grid-auto-columns": `${attributes.size}%` }}>
             {attributes.images.map((image) => (
               <img key={image.url} src={image.url} />
             ))}
@@ -68,7 +68,13 @@ export default function Edit(props) {
       </BlockControls>
       <InspectorControls>
         <PanelBody title={__('General', 'gutenberg')} initialOpen>
-
+          <RangeControl
+            label={__('Size')}
+            value={attributes.size}
+            min="2"
+            max="20"
+            onChange={(set) => setAttributes({ size: set })}
+          />
           <PanelColorSettings
             title={__('Color settings')}
             colorSettings={[

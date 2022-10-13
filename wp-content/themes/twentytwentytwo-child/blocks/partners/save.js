@@ -12,12 +12,12 @@ export default function save(props) {
     divClass = getColorClassName('background-color', backgroundColor);
   }
   if (customBackgroundColor !== undefined) {
-    divStyles.color = customBackgroundColor;
+    divStyles.backgroundColor = customBackgroundColor;
   }
   return (
     <div {...blockProps}>
       <div className={divClass} style={divStyles}>
-        <figure className="partners-gallery-inner-container" data-direction="right">
+        <figure className="partners-gallery-inner-container" style={{ "grid-auto-columns": `${props.attributes.size}%` }}>
           {props.attributes.images.map((image) => (
             <img key={image.url} src={image.url} data-mediaid={image.id} />
           ))}

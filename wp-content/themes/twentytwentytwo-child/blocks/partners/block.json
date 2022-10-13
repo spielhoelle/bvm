@@ -28,6 +28,10 @@
 			"type": "string",
 			"default": ""
 		},
+		"size": {
+			"type": "number",
+			"default": 20
+		},
 		"backgroundColor": {
 			"type": "string"
 		}
