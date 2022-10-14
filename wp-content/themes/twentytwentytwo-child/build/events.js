@@ -81,7 +81,7 @@ function Edit(props) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("textPath", {
     xlinkHref: "#circle"
   }, blocks.map((block, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("tspan", {
-    dx: attributes.word_spacing,
+    dx: attributes.word_spacing / 10,
     key: block.attributes.title,
     xmlSpace: "preserve",
     fill: index === 0 ? "#CB8E00" : "black"

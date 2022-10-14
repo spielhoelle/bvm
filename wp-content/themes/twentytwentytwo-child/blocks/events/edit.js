@@ -60,7 +60,7 @@ export default function Edit(props) {
                 {blocks.map((block, index) => (
                   <>
                     <tspan
-                      dx={attributes.word_spacing}
+                      dx={( attributes.word_spacing / 10 )}
                       key={block.attributes.title}
                       xmlSpace="preserve"
                       fill={index === 0 ? "#CB8E00" : "black"}
