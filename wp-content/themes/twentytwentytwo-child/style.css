@@ -166,33 +166,43 @@ html.has-modal-open {
 .has-opacity-0 {
 	opacity: 0.0
 }
+
 .has-opacity-1 {
 	opacity: 0.1
 }
+
 .has-opacity-2 {
 	opacity: 0.2
 }
+
 .has-opacity-3 {
 	opacity: 0.3
 }
+
 .has-opacity-4 {
 	opacity: 0.4
 }
+
 .has-opacity-5 {
 	opacity: 0.5
 }
+
 .has-opacity-6 {
 	opacity: 0.6
 }
+
 .has-opacity-7 {
 	opacity: 0.7
 }
+
 .has-opacity-8 {
 	opacity: 0.8
 }
+
 .has-opacity-9 {
 	opacity: 0.9
 }
+
 .has-opacity-10 {
 	opacity: 1
 }
@@ -237,6 +247,12 @@ html.has-modal-open {
 
 @media (max-width: 720px) {
 	.events-workbox {
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.hideonmobile {
 		display: none;
 	}
 }
