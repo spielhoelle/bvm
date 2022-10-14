@@ -33,9 +33,13 @@ add_action('wp_enqueue_scripts', 'wpdocs_theme_name_scripts');
 
 function myguten_enqueue()
 {
-	$heading_path = get_stylesheet_directory_uri() . '/build/heading.js';
-	wp_enqueue_script('custom_js', $heading_path, array(), false);
+	$alt_font_path = get_stylesheet_directory_uri() . '/build/alt_font.js';
+	wp_enqueue_script('custom_js', $alt_font_path, array(), false);
 	$video_path = get_stylesheet_directory_uri() . '/build/video.js';
 	wp_enqueue_script('video_js', $video_path, array(), false);
+
+	// Add styles also to gutenberg editor
+	wp_register_style('style-name', get_stylesheet_directory_uri() . '/style.css');
+	wp_enqueue_style('style-name');
 }
 add_action('enqueue_block_editor_assets', 'myguten_enqueue');

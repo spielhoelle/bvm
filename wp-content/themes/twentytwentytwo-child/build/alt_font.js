@@ -13246,9 +13246,9 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 !function() {
 "use strict";
-/*!*************************************!*\
-  !*** ./extentions/heading/index.js ***!
-  \*************************************/
+/*!**************************************!*\
+  !*** ./extentions/alt_font/index.js ***!
+  \**************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
@@ -13312,7 +13312,13 @@ function LightboxBlockEdit(props) {
   classNameGenerator: generateClassName,
   Edit: LightboxBlockEdit
 });
+(0,_10up_block_components__WEBPACK_IMPORTED_MODULE_1__.registerBlockExtension)(`core/paragraph`, {
+  extensionName: 'alt_font',
+  attributes: newAttributes,
+  classNameGenerator: generateClassName,
+  Edit: LightboxBlockEdit
+});
 }();
 /******/ })()
 ;
-//# sourceMappingURL=heading.js.map
+//# sourceMappingURL=alt_font.js.map

@@ -14,7 +14,7 @@ module.exports = {
     miniimage: './blocks/miniimage',
     partners: './blocks/partners',
     "language-switcher": './blocks/language-switcher/',
-    "heading": './extentions/heading/',
+    "alt_font": './extentions/alt_font/',
     "video": './extentions/video/',
   },
 }

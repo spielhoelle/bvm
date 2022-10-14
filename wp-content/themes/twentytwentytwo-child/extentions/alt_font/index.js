@@ -52,3 +52,12 @@ registerBlockExtension(
     Edit: LightboxBlockEdit,
   },
 )
+registerBlockExtension(
+  `core/paragraph`,
+  {
+    extensionName: 'alt_font',
+    attributes: newAttributes,
+    classNameGenerator: generateClassName,
+    Edit: LightboxBlockEdit,
+  },
+)

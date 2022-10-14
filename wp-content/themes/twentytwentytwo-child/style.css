@@ -162,6 +162,9 @@ html.has-modal-open {
 .has-alt-font {
 	font-family: var(--wp--preset--font-family--asap) !important;
 }
+p.has-alt-font {
+	font-family: var(--wp--preset--font-family--unna) !important;
+}
 
 .has-opacity-0 {
 	opacity: 0.0
