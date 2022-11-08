@@ -4,6 +4,7 @@
 /** style.scss **/
 .wp-block-create-block-tmy-circletext {
   overflow: hidden;
+  width: 100%;
 }
 .wp-block-create-block-tmy-circletext .circletext-text {
   margin: 0;
@@ -12,9 +13,9 @@
 .wp-block-create-block-tmy-circletext .circletext-text svg {
   fill: currentColor;
   height: auto;
-  max-width: 66vmin;
+  max-width: 100vmin;
   transform-origin: center;
-  width: 66%;
+  width: 100%;
 }
 .wp-block-create-block-tmy-circletext .circletext-text svg text {
   font-size: 7px;
