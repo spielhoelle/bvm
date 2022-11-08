@@ -1,7 +1,40 @@
-.employees .block-editor-inner-blocks{
+.wp-block-create-block-tmy-employees {
+	&:after,
+	&:before {
+		content: "";
+		width: 100%;
+		background-color: white;
+		padding-bottom: 100%;
+		height: 0;
+		position: absolute;
+		z-index: -1;
+	}
+	&:before {
+		top: 0;
+		border-top-right-radius: 50%;
+		border-top-left-radius: 50%;
+		transform: translateY(-50%);
+	}
+	&:after {
+		bottom: 0;
+		transform: translateY(50%);
+		border-bottom-right-radius: 50%;
+		border-bottom-left-radius: 50%;
+	}
+	@media (min-width: 720px) {
+		background-color: transparent;
+		&:after,
+		&:before {
+			background-color: transparent;
+		}
+	}
+	background-color: white;
+}
+.employees .block-editor-inner-blocks {
 	// width: 100%;
 }
-.employees, .employees .block-editor-block-list__layout {
+.employees,
+.employees .block-editor-block-list__layout {
 	position: relative;
 	display: flex;
 	gap: 20px;
