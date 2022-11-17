@@ -21,18 +21,18 @@ export default function Edit(props) {
   })
   return (
     <div {...blockProps}>
-      {attributes.hascircle && (
-        <div className="circle" />
-      )}
       <InnerBlocks
         allowedBlocks={ALLOWED_BLOCK_TYPES}
         renderAppender={() => <InnerBlocks.ButtonBlockAppender />}
       />
+      {attributes.hascircle && (
+        <div className="circle" />
+      )}
       <InspectorControls>
         <PanelBody title={__('General', 'gutenpride')} initialOpen>
           <CheckboxControl
             label="Has white circle background"
-            help="Control wheter the row shows a white circle in the background. Just one of the employee lists should have that."
+            help="Control wheter the row shows a white circle in the background. Just one of the employee lists should have that. On mobile replaced by a bigger, oval shape which replaces this circle."
             checked={attributes.hascircle}
             onChange={() => setAttributes({ hascircle: !attributes.hascircle })}
           />

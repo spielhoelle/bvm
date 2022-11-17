@@ -1,4 +1,5 @@
 .wp-block-create-block-tmy-employees {
+
 	&:after,
 	&:before {
 		content: "";
@@ -9,30 +10,33 @@
 		position: absolute;
 		z-index: -1;
 	}
+
 	&:before {
 		top: 0;
 		border-top-right-radius: 50%;
 		border-top-left-radius: 50%;
 		transform: translateY(-50%);
 	}
+
 	&:after {
 		bottom: 0;
 		transform: translateY(50%);
 		border-bottom-right-radius: 50%;
 		border-bottom-left-radius: 50%;
 	}
+
 	@media (min-width: 720px) {
 		background-color: transparent;
+
 		&:after,
 		&:before {
 			background-color: transparent;
 		}
 	}
+
 	background-color: white;
 }
-.employees .block-editor-inner-blocks {
-	// width: 100%;
-}
+
 .employees,
 .employees .block-editor-block-list__layout {
 	position: relative;
@@ -40,18 +44,24 @@
 	gap: 20px;
 	width: 100%;
 }
+
 .employees {
 	margin: 10px !important;
-	@media (max-width: 720px) {
-		flex-wrap: wrap;
+	flex-wrap: wrap;
+
+	@media (min-width: 720px) {
+		flex-wrap: nowrap;
 	}
 }
+
 .employees.left {
 	justify-content: flex-start;
 }
+
 .employees.right {
 	justify-content: flex-end;
 }
+
 .employees .circle {
 	pointer-events: none;
 	background-color: white;

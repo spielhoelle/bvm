@@ -44,7 +44,7 @@ function Edit(props) {
   };
 
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `employee-single-wrapper ${attributes.direction} ${!attributes.image || isSelected ? `hovered` : ``}`
+    className: `employee-single-wrapper ${attributes.direction} ${!attributes.image || isSelected ? `hovered` : ``} ${!attributes.image ? `no_image` : ``}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "employee-single-text"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -162,7 +162,7 @@ function save(props) {
     attributes
   } = props;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `employee-single-wrapper ${attributes.direction} ${!attributes.image ? `hovered` : ``}`
+    className: `employee-single-wrapper ${attributes.direction} ${!attributes.image ? `hovered` : ``} ${!attributes.image ? `no_image` : ``}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "employee-single-text"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -170,7 +170,7 @@ function save(props) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     tagName: "h3",
     value: attributes.title
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+  }), attributes.content && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     tagName: "p",
     value: attributes.content
   }))), !!attributes.image && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", {

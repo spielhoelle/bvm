@@ -30,7 +30,7 @@ export default function Edit(props) {
   }
   return (
     <div {...useBlockProps()}>
-      <div className={`employee-single-wrapper ${attributes.direction} ${!attributes.image || isSelected ? `hovered` : ``}`}>
+      <div className={`employee-single-wrapper ${attributes.direction} ${!attributes.image || isSelected ? `hovered` : ``} ${!attributes.image ? `no_image` : ``}`}>
         <div className="employee-single-text">
           <div className="employee-single-text-wrapper">
             <RichText

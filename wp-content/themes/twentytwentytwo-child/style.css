@@ -63,7 +63,6 @@ a, a:hover, a:active {
 	width: 100%;
 	pointer-events: none;
 	padding: 20px;
-	/* z-index: 0; */
 }
 
 .uppernav a,
@@ -256,6 +255,6 @@ p.has-alt-font {
 
 @media (max-width: 767px) {
 	.hideonmobile {
-		display: none;
+		display: none !important;
 	}
 }

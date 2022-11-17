@@ -44,10 +44,11 @@
 
 .employees {
   margin: 10px !important;
+  flex-wrap: wrap;
 }
-@media (max-width: 720px) {
+@media (min-width: 720px) {
   .employees {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 }
 
