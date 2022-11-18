@@ -76,7 +76,7 @@ function Edit(props) {
     alt: image.url,
     src: image.url
   })) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("video", {
-    autoplay: true,
+    autoPlay: true,
     loop: true,
     muted: true,
     key: image.url,

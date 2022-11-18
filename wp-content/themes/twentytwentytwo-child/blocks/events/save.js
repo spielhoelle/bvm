@@ -26,7 +26,7 @@ export default function save(props) {
             <textPath xlinkHref="#circle">
               {props.attributes.events.map((block, index) => (
                 <tspan
-                  dx={props.attributes.word_spacing}
+                  dx={props.attributes.word_spacing / 10}
                   key={block.attributes.title}
                   xmlSpace="preserve"
                   fill={index === 0 ? "#CB8E00" : "black"}

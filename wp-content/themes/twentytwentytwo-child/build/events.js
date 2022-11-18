@@ -183,7 +183,7 @@ function save(props) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("textPath", {
     xlinkHref: "#circle"
   }, props.attributes.events.map((block, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("tspan", {
-    dx: props.attributes.word_spacing,
+    dx: props.attributes.word_spacing / 10,
     key: block.attributes.title,
     xmlSpace: "preserve",
     fill: index === 0 ? "#CB8E00" : "black"
