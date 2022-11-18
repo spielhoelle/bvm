@@ -20,10 +20,15 @@ $image_size: 180px;
 		justify-content: space-between;
 	}
 
+	figure.employee-single-image,
 	img,
 	.components-placeholder {
 		width: $image_size;
 		height: $image_size;
+	}
+
+	img,
+	.components-placeholder {
 		object-fit: cover;
 		transition: border-radius 0.3s ease;
 		filter: grayscale(1);

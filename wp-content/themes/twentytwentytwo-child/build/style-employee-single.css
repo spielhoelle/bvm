@@ -21,10 +21,14 @@
   display: flex;
   justify-content: space-between;
 }
+.wp-block-create-block-tmy-employee-single figure.employee-single-image,
 .wp-block-create-block-tmy-employee-single img,
 .wp-block-create-block-tmy-employee-single .components-placeholder {
   width: 180px;
   height: 180px;
+}
+.wp-block-create-block-tmy-employee-single img,
+.wp-block-create-block-tmy-employee-single .components-placeholder {
   -o-object-fit: cover;
      object-fit: cover;
   transition: border-radius 0.3s ease;
