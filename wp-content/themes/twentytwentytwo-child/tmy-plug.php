@@ -37,6 +37,8 @@ function myguten_enqueue()
 	wp_enqueue_script('custom_js', $alt_font_path, array(), false);
 	$video_path = get_stylesheet_directory_uri() . '/build/video.js';
 	wp_enqueue_script('video_js', $video_path, array(), false);
+	$hide_on_device = get_stylesheet_directory_uri() . '/build/hide_on_device.js';
+	wp_enqueue_script('hide_on_device_js', $hide_on_device, array(), false);
 
 	// Add styles also to gutenberg editor
 	wp_register_style('style-name', get_stylesheet_directory_uri() . '/style.css');

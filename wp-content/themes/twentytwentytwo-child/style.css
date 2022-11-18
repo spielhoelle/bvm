@@ -161,6 +161,7 @@ html.has-modal-open {
 .has-alt-font {
 	font-family: var(--wp--preset--font-family--asap) !important;
 }
+
 p.has-alt-font {
 	font-family: var(--wp--preset--font-family--unna) !important;
 }
@@ -255,6 +256,24 @@ p.has-alt-font {
 
 @media (max-width: 767px) {
 	.hideonmobile {
+		display: none !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.hide_on_mobile {
+		display: none !important;
+	}
+}
+
+@media (min-width: 767px) and (max-width: 1200px) {
+	.hide_on_tablet {
+		display: none !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hide_on_desktop {
 		display: none !important;
 	}
 }

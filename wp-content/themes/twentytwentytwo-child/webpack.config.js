@@ -16,5 +16,6 @@ module.exports = {
     "language-switcher": './blocks/language-switcher/',
     "alt_font": './extentions/alt_font/',
     "video": './extentions/video/',
+    "hide_on_device": './extentions/hide_on_device/',
   },
 }
