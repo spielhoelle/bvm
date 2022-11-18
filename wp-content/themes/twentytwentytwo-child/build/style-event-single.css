@@ -6,7 +6,7 @@
 }
 
 .event-single {
-  height: 100vh;
+  min-height: 100vh;
   margin-bottom: 2vh;
 }
 .event-single video {
