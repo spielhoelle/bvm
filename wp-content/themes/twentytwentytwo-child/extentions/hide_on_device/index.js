@@ -72,7 +72,6 @@ addFilter(
 )
 
 const addVisibilityClasses = (extraProps, blockType, attributes) => {
-  console.log('extraProps', extraProps)
   const { hideOnDesktop, hideOnTablet, hideOnMobile } = attributes
 
   extraProps.className = classnames(extraProps.className, {

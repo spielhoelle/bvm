@@ -34,7 +34,6 @@ function LightboxBlockEdit(props) {
           min="0"
           max="10"
           onChange={(set) => {
-            console.log('set', set)
             setAttributes({ opacity: set })
           }}
         />

@@ -291,7 +291,6 @@ const withInspectorControl = (0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_2__.
 (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_6__.addFilter)("editor.BlockEdit", "block-visibility/with-advance-controls", withInspectorControl);
 
 const addVisibilityClasses = (extraProps, blockType, attributes) => {
-  console.log('extraProps', extraProps);
   const {
     hideOnDesktop,
     hideOnTablet,

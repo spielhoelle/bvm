@@ -37,14 +37,11 @@ __webpack_require__.r(__webpack_exports__);
   icon: 'megaphone',
   category: 'widgets',
   edit: _ref => {
-    let {
-      attributes,
-      setAttributes
-    } = _ref;
+    let {} = _ref;
     const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)();
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_5___default()), {
-      block: "create-block/tmy-language-switcher",
-      attributes: attributes
+      block: "create-block/tmy-language-switcher" // attributes={attributes}
+
     }));
   },
 

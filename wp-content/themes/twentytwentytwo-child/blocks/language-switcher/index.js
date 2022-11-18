@@ -11,11 +11,17 @@ registerBlockType('create-block/tmy-language-switcher', {
   title: 'Language switcher',
   icon: 'megaphone',
   category: 'widgets',
-  edit: ({ attributes, setAttributes }) => {
+  edit: ({
+    // attributes,
+    // setAttributes
+  }) => {
     const blockProps = useBlockProps()
     return (
       <div {...blockProps}>
-        <ServerSideRender block={"create-block/tmy-language-switcher"} attributes={attributes} />
+        <ServerSideRender
+          block={"create-block/tmy-language-switcher"}
+        // attributes={attributes}
+        />
       </div>
     )
   },
