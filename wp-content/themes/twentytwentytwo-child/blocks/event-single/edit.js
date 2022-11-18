@@ -45,6 +45,9 @@ export default function Edit(props) {
   return (
     <div {...blockProps}>
       <div className={`event-single-wrapper`}>
+        <div className="event-single-text d-md-none">
+          <h2>{attributes.title}</h2>
+        </div>
         <div className={`imagegrid ${attributes.imagelayout} gridlength-${attributes.images.length}`}>
           {hasImages && attributes.images.map((image, index) => (
             image.type === "image" ? (

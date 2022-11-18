@@ -9,6 +9,12 @@ export default function save(props) {
   return (
     <div {...blockProps}>
       <div className={`event-single-wrapper`}>
+        <div className="event-single-text d-md-none">
+          <RichText.Content
+            tagName="h2"
+            value={attributes.title}
+          />
+        </div>
         <div className={`imagegrid ${attributes.imagelayout} gridlength-${attributes.images.length}`}>
           {hasImages && attributes.images.map((image, index) => (
             image.type === "image" ? (
@@ -37,10 +43,6 @@ export default function save(props) {
         </div>
         <div className="event-single-text">
           <div className="d-md-none">
-            <RichText.Content
-              tagName="h2"
-              value={attributes.title}
-            />
             <div className="d-none">
               <RichText.Content
                 tagName="h3"
