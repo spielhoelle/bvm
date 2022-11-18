@@ -2,8 +2,15 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/jobs/style.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************/
 .jobs h2 {
-  margin: 16px 0;
-  font-size: 26px !important;
+  margin: 5px 0;
+  font-family: var(--wp--preset--font-family--asap);
+  font-size: 22px !important;
+}
+@media (min-width: 720px) {
+  .jobs h2 {
+    font-size: 26px !important;
+    margin: 16px 0;
+  }
 }
 .jobs a {
   text-decoration: none;
@@ -12,12 +19,14 @@
 .jobs table {
   width: 100%;
 }
-.jobs td {
-  width: 50%;
-}
 .jobs img {
-  margin-left: 20px;
+  margin-left: 8px;
   width: 80px;
+}
+@media (min-width: 720px) {
+  .jobs img {
+    margin-left: 20px;
+  }
 }
 
 /*# sourceMappingURL=style-jobs.css.map*/

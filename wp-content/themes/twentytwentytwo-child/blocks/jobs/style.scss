@@ -1,20 +1,38 @@
 .jobs {
 	h2 {
-		margin: 16px 0;
-		font-size: 26px !important;
+		margin: 5px 0;
+		font-family: var(--wp--preset--font-family--asap);
+		font-size: 22px !important;
+
+		@media (min-width: 720px) {
+			font-size: 26px !important;
+			margin: 16px 0;
+		}
+
 	}
+
 	a {
 		text-decoration: none;
 		color: var(--wp--preset--color--black) !important;
-	}	
+	}
+
 	table {
 		width: 100%;
 	}
-	td {
-		width: 50%;
-	}
+
+	// td {
+	// @media (min-width: 720px) {
+	// 	width: 50%;
+	// }
+	// }
+
 	img {
-		margin-left: 20px;
+		margin-left: 8px;
+
+		@media (min-width: 720px) {
+			margin-left: 20px;
+		}
+
 		width: 80px;
 	}
 }
