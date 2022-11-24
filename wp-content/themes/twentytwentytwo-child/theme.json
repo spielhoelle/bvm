@@ -15,7 +15,34 @@
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./fonts/Asap/Asap-VariableFont_wght.ttf"
+								"file:./fonts/Asap/Asap-Regular.ttf"
+							]
+						},
+						{
+							"fontFamily": "Asap",
+							"fontWeight": "500",
+							"fontStyle": "medium",
+							"fontStretch": "normal",
+							"src": [
+								"file:./fonts/Asap/Asap-Medium.ttf"
+							]
+						},
+						{
+							"fontFamily": "Asap",
+							"fontWeight": "900",
+							"fontStyle": "bold",
+							"fontStretch": "normal",
+							"src": [
+								"file:./fonts/Asap/Asap-Bold.ttf"
+							]
+						},
+						{
+							"fontFamily": "Asap",
+							"fontWeight": "400",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [
+								"file:./fonts/Asap/Asap-Italic-VariableFont_wght"
 							]
 						}
 					]
@@ -32,6 +59,15 @@
 							"fontStretch": "normal",
 							"src": [
 								"file:./fonts/Unna/Unna-Regular.ttf"
+							]
+						},
+						{
+							"fontFamily": "Unna",
+							"fontWeight": "900",
+							"fontStyle": "bold",
+							"fontStretch": "normal",
+							"src": [
+								"file:./fonts/Unna/Unna-Bold.ttf"
 							]
 						}
 					]
