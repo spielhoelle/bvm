@@ -121,7 +121,11 @@ figure {
   padding: 10px 0 30px;
 }
 .event-single-text h2 {
+  font-size: 30px !important;
   margin: 0;
+}
+.event-single-text h3 {
+  font-family: var(--wp--preset--font-family--asap) !important;
 }
 
 /*# sourceMappingURL=style-event-single.css.map*/
