@@ -17,7 +17,7 @@ Twenty Twenty-Two Child WordPress Theme, (C) 2021 WordPress.org
 Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 */
 body {
-	--wp--preset--font-size--medium: 20px;
+	--wp--preset--font-size--medium: 16px;
 	--wp--custom--typography--font-size--colossal: 59px;
 	--wp--custom--typography--font-size--gigantic: 52px;
 	--wp--custom--typography--font-size--huge: 42px;
@@ -28,7 +28,7 @@ body {
 
 @media (min-width: 720px) {
 	body {
-		--wp--preset--font-size--medium: 26px;
+		--wp--preset--font-size--medium: 20px;
 	}
 }
 
