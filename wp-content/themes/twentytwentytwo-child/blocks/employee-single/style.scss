@@ -1,4 +1,4 @@
-$image_size: 180px;
+$image_size: 170px;
 
 .wp-block-create-block-tmy-employee-single {
 	display: flex;
@@ -79,13 +79,13 @@ $image_size: 180px;
 
 	}
 
-	.employee-single-wrapper:hover,
-	.employee-single-wrapper.hovered {
+	.employee-single-wrapper:not(.no_image):hover,
+	.employee-single-wrapper:not(.no_image).hovered {
 		img {
 			border-radius: 50%;
 			filter: none;
 		}
-
+		
 		@media (min-width: 720px) {
 			&.left {
 				.employee-single-text {
@@ -95,7 +95,7 @@ $image_size: 180px;
 
 			&.right {
 				padding-left: $image_size;
-
+				
 				.employee-single-text {
 					margin-right: 50%;
 				}
@@ -134,7 +134,7 @@ $image_size: 180px;
 	}
 
 	@media (min-width: 720px) {
-		.employee-single-wrapper.left {
+		.employee-single-wrapper:not(.no_image).left {
 			&:hover {
 				padding-right: $image_size !important;
 
