@@ -103,7 +103,9 @@
   .wp-block-create-block-tmy-employee-single .employee-single-wrapper {
     width: auto;
   }
-  .wp-block-create-block-tmy-employee-single .employee-single-wrapper .employee-single-text {
+}
+@media (min-width: 720px) {
+  .wp-block-create-block-tmy-employee-single .employee-single-wrapper:not(.no_image) .employee-single-text {
     position: absolute;
     top: 0;
     left: 0;
