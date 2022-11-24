@@ -1,0 +1,1 @@
+ssh $wh "cd ~/www/bvm && git pull"
