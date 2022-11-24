@@ -60,8 +60,7 @@ export default function Edit(props) {
                 Your browser does not support the video tag.
               </video>
             )
-          )
-          )}
+          ))}
           {!hasImages && (
             <MediaPlaceholder
               multiple
