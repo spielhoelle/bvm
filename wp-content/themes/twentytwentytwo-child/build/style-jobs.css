@@ -19,6 +19,14 @@
 .jobs table {
   width: 100%;
 }
+.jobs table td {
+  width: auto;
+}
+@media (min-width: 720px) {
+  .jobs table td {
+    width: 50%;
+  }
+}
 .jobs img {
   margin-left: 8px;
   width: 80px;

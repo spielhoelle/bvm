@@ -8,16 +8,22 @@
 			font-size: 26px !important;
 			margin: 16px 0;
 		}
-
+		
 	}
-
+	
 	a {
 		text-decoration: none;
 		color: var(--wp--preset--color--black) !important;
 	}
-
+	
 	table {
 		width: 100%;
+		td {
+			width: auto;
+			@media (min-width: 720px) {
+				width: 50%;
+			}
+		}
 	}
 
 	// td {
