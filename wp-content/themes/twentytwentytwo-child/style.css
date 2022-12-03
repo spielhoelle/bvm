@@ -49,6 +49,27 @@ a, a:hover, a:active {
 	pointer-events: none;
 }
 
+.uppernav>*:first-child,
+.uppernav>*:last-child {
+	background-color: var(--wp--preset--color--background);
+}
+
+.uppernav>*:last-child {
+	padding: 12px 28px;
+}
+
+@media (min-width: 720px) {
+
+	.uppernav>*:first-child,
+	.uppernav>*:last-child {
+		background-color: transparent ;
+	}
+
+	.uppernav>*:last-child {
+		padding: 28px;
+	}
+}
+
 .uppernav>*:first-child {
 	position: fixed;
 	top: 0;
@@ -68,7 +89,6 @@ a, a:hover, a:active {
 	left: 0;
 	width: 100%;
 	pointer-events: none;
-	padding: 28px;
 }
 
 .uppernav a,
@@ -243,7 +263,7 @@ p.has-alt-font {
 
 @media (max-width: 720px) {
 	.bvm-footer {
-		margin-block-end: 90px !important;
+		margin-block-end: 60px !important;
 	}
 }
 
