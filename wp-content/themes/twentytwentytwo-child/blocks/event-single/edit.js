@@ -55,7 +55,7 @@ export default function Edit(props) {
                 <img alt={image.url} src={image.url} />
               </figure>
             ) : (
-              <video autoPlay loop muted key={image.url} className={`events-${index + 1}`}>
+              <video autoPlay loop key={image.url} className={`events-${index + 1}`}>
                 <source src={image.url} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>

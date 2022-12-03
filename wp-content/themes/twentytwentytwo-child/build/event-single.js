@@ -78,7 +78,6 @@ function Edit(props) {
   })) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("video", {
     autoPlay: true,
     loop: true,
-    muted: true,
     key: image.url,
     className: `events-${index + 1}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("source", {
@@ -220,7 +219,6 @@ function save(props) {
   })) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("video", {
     autoplay: true,
     loop: true,
-    muted: true,
     key: image.url,
     className: `events-${index + 1}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("source", {

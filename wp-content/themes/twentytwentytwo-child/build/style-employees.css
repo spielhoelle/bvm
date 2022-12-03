@@ -17,11 +17,11 @@
   top: 0;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
 }
 .wp-block-create-block-tmy-employees:after {
   bottom: 0;
-  transform: translateY(50%);
+  transform: translateY(100%);
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
 }
@@ -38,12 +38,12 @@
 .employees .block-editor-block-list__layout {
   position: relative;
   display: flex;
-  gap: 20px;
+  gap: 15px;
   width: 100%;
 }
 
 .employees {
-  margin: 20px !important;
+  margin: 15px !important;
   flex-wrap: wrap;
 }
 @media (min-width: 720px) {

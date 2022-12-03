@@ -68,7 +68,7 @@ a, a:hover, a:active {
 	left: 0;
 	width: 100%;
 	pointer-events: none;
-	padding: 20px;
+	padding: 28px;
 }
 
 .uppernav a,
@@ -157,7 +157,11 @@ html.has-modal-open {
 	pointer-events: none;
 }
 
-
+@media (min-width: 782px) {
+	.has-modal-open .admin-bar .is-menu-open .wp-block-navigation__responsive-dialog {
+		margin-top: 0;
+	}
+}
 
 .polylang_langswitcher {
 	text-transform: uppercase;
@@ -225,6 +229,16 @@ p.has-alt-font {
 	padding: 20px;
 	margin-block-start: 0 !important;
 	margin-block-end: 0 !important;
+}
+
+@media (max-width: 720px) {
+	.bvm-footer {
+		padding: 0 20px;
+	}
+}
+
+.bvm-footer .wp-block-image img {
+	vertical-align: text-top;
 }
 
 @media (max-width: 720px) {
